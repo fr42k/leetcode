@@ -37,25 +37,24 @@ public:
         if (!n) return -1;
         vector<vector<int>> ngrid(grid);
         vector<vector<int>> total(m, vector<int>(n, 0));
-        vector<int> dir{0, -1, 0, 1, 0};
-        int canReach = 0;
+        vector<int> dir{0, 1, 0, -1, 0};
+        int mind = INT_MAX, canReach = 0;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (grid[i][j] == 1) {
                     queue<pair<int, int>> q;
+                    vector<vector<int>> dist(m, vector<int>(n, 0));
                     q.emplace(i, j);
-                    vector<vector<int>> localdist(m, vector<int>(n, 0));
                     while (!q.empty()) {
-                        auto p = q.front();
+                        int x = q.front().first, y = q.front().second;
                         q.pop();
-                        for (int i = 0; i < 4; i++) {
-                            int x = p.first + dir[i];
-                            int y = p.second + dir[i + 1];
-                            if (0 <= x && x < m && 0 <= y && y < n && ngrid[x][y] == canReach) {
-                                ngrid[x][y]--;
-                                localdist[x][y] = 1 + localdist[p.first][p.second];
-                                total[x][y] += localdist[x][y];
-                                q.emplace(x, y);
+                        for (int k = 0; k < 4; k++) {
+                            int next_x = x + dir[k], next_y = y + dir[k + 1];
+                            if (valid(next_x, next_y, m, n) && ngrid[next_x][next_y] == canReach) {
+                                ngrid[next_x][next_y]--;
+                                dist[next_x][next_y] = dist[x][y] + 1;
+                                total[next_x][next_y] += dist[next_x][next_y];
+                                q.emplace(next_x, next_y);
                             }
                         }
                     }
@@ -63,14 +62,16 @@ public:
                 }
             }
         }
-        int ans = INT_MAX;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                if (ngrid[i][j] == canReach && total[i][j] < ans) {
-                    ans = total[i][j];
+                if (ngrid[i][j] == canReach && total[i][j] < mind) {
+                    mind = total[i][j];
                 }
             }
         }
-        return ans == INT_MAX? -1: ans;
+        return mind == INT_MAX? -1: mind;
+    }
+    inline bool valid(int x, int y, int m, int n) {
+        return (0 <= x && x < m && 0 <= y && y < n);
     }
 };

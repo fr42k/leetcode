@@ -24,18 +24,18 @@
 class Solution {
 public:
     vector<int> plusOne(vector<int>& digits) {
-        int s = digits.size();
-        int ah = 0;
-        int bitsum = 0;
-        digits[s - 1] += 1;
-        for (int i = s - 1; i >= 0; i--) {
-            bitsum = (ah + digits[i]);
-            ah = bitsum / 10;
-            digits[i] = bitsum % 10;
+        vector<int> ans(digits);
+        ans.back() += 1;
+        int c = 0;
+        for (int i = ans.size() - 1; i >= 0; i--) {
+            int sum = c;
+            sum += ans[i];
+            c = sum / 10;
+            ans[i] = sum % 10;
         }
-        if (ah) {
-            digits.insert(digits.begin(), 1);
+        if (c) {
+            ans.insert(ans.begin(), 1);
         }
-        return digits;
+        return ans;
     }
 };

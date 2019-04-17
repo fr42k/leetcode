@@ -13,16 +13,17 @@ class Solution {
 public:
     vector<string> findMissingRanges(vector<int>& nums, int lower, int upper) {
         vector<string> ans;
-        int prev = lower;
         for (int k: nums) {
-            if (prev < k) {
-                ans.emplace_back(to_string(prev) + (prev < min(k - 1, upper)? "->" + to_string(min(k - 1, upper)): ""));
+            if (k > lower) {
+                ans.emplace_back(to_string(lower) + (k - 1 > lower? "->" + to_string(k - 1): ""));
             }
-            if (k >= upper) return ans;
-            prev = k + 1;
+            lower = k + 1;
+            if (k == upper) {
+                return ans;
+            }
         }
-        if (prev <= upper) {
-            ans.emplace_back(to_string(prev) + (prev < upper? "->" + to_string(upper): ""));
+        if (upper >= lower) {
+            ans.emplace_back(to_string(lower) + (upper > lower? "->" + to_string(upper): ""));
         }
         return ans;
     }

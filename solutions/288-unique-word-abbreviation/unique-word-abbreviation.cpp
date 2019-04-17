@@ -36,29 +36,29 @@
 class ValidWordAbbr {
 public:
     ValidWordAbbr(vector<string> dictionary) {
-        for (auto s: dictionary) {
-            if (raw.count(s)) {
+        for (auto word: dictionary) {
+            if (raw.count(word)) {
                 continue;
             }
-            raw.emplace(s);
-            int n = s.size();
-            if (n > 2) s.replace(1, n - 2, to_string(n - 2));
-            cnt[s]++;
+            raw.emplace(word);
+            int n = word.size();
+            if (n > 2) word.replace(1, n - 2, to_string(n - 2));
+            abbr_cnt[word]++;
         }
     }
     
     bool isUnique(string word) {
-        int n = word.size();
         string abbr(word);
+        int n = abbr.size();
         if (n > 2) abbr.replace(1, n - 2, to_string(n - 2));
         if (raw.count(word)) {
-            return cnt[abbr] == 1;
+            return abbr_cnt[abbr] == 1;
         } else {
-            return cnt[abbr] == 0;
+            return abbr_cnt[abbr] == 0;
         }
     }
     unordered_set<string> raw;
-    unordered_map<string, int> cnt;
+    unordered_map<string, int> abbr_cnt;
 };
 
 /**

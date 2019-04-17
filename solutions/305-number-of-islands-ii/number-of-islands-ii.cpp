@@ -58,33 +58,36 @@
 class Solution {
 public:
     vector<int> numIslands2(int m, int n, vector<pair<int, int>>& positions) {
-        vector<int> uf(m * n, -1);
         vector<int> ans;
-        int island = 0;
         vector<int> dir{0, 1, 0, -1, 0};
+        vector<int> uf(m * n, -1);
+        int cnt = 0;
         for (auto p: positions) {
-            int x_ = p.first, y_ = p.second;
-            int idx_ = x_ * n + y_;
-            uf[idx_] = idx_;
-            island++;
-            for (int i = 0; i < 4; i++) {
-                int x = x_ + dir[i], y = y_ + dir[i + 1];
-                int idx = x * n + y;
-                if (0 <= x && x < m && 0 <= y && y < n && uf[idx] != -1) {
-                    int p_old = ufind(uf, idx_), p_new = ufind(uf, idx);
-                    if (p_old != p_new) {
-                        island--;
-                        uf[p_old] = min(p_old, p_new);
-                        uf[p_new] = uf[p_old];
+            int x = p.first, y = p.second;
+            int idx = x * n + y;
+            uf[idx] = idx;
+            cnt++;
+            for (int k = 0; k < 4; k++) {
+                int n_x = x + dir[k], n_y = y + dir[k + 1];
+                int n_idx = n_x * n + n_y;
+                if (valid(n_x, n_y, m, n) && uf[n_idx] != -1) {
+                    int pa = ufind(uf, idx), pb = ufind(uf, n_idx);
+                    if (pa != pb) {
+                        cnt--;
+                        uf[pa] = min(pa, pb);
+                        uf[pb] = uf[pa];
                     }
                 }
             }
-            ans.emplace_back(island);
+            ans.emplace_back(cnt);
         }
         return ans;
     }
+    inline bool valid(int x, int y, int m, int n) {
+        return (0 <= x && x < m && 0 <= y && y < n);
+    }
     int ufind(vector<int>& uf, int k) {
-        if (uf[k] != k) {
+        if (k != uf[k]) {
             uf[k] = ufind(uf, uf[k]);
         }
         return uf[k];

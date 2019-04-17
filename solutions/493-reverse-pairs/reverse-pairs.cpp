@@ -27,19 +27,19 @@ public:
     int reversePairs(vector<int>& nums) {
         return mergesort(nums, 0, nums.size());
     }
-    int mergesort(vector<int>& nums, int s, int e) {
-        if (s + 1 >= e) return 0;
-        int m = s + (e - s) / 2;
-        int cnt = mergesort(nums, s, m) + mergesort(nums, m, e);
-        int i = s, j = m;
-        while (i < m) {
-            while (j < e && nums[i] > 2.0 * nums[j]) {
-                ++j;
+    int mergesort(vector<int>& nums, int l, int h) {
+        if (h - l <= 1) return 0;
+        int m = l + (h - l) / 2;
+        int cnt = mergesort(nums, l, m) + mergesort(nums, m, h);
+        int p1 = l, p2 = m;
+        while (p1 < m) {
+            while (p2 < h && 1.0 * nums[p1] > 2.0 * nums[p2]) {
+                p2++;
             }
-            cnt += j - m;
-            ++i;
+            cnt += p2 - m;
+            p1++;
         }
-        sort(nums.begin() + s, nums.begin() + e);
+        sort(nums.begin() + l, nums.begin() + h);
         return cnt;
     }
 };

@@ -21,21 +21,14 @@ class Solution {
 public:
     int lengthOfLongestSubstringTwoDistinct(string s) {
         vector<int> counter(256, 0);
-        int n = s.size(), slow = 0, ans = 0, diff = 0;
-        for (int fast = 0; fast < n; fast++) {
+        int maxd = 0, diff = 0;
+        for (int slow = 0, fast = 0; fast < s.size(); fast++) {
             if (counter[s[fast]]++ == 0) diff++;
             while (diff > 2) {
-                ans = max(ans, fast - slow);
-                if (--counter[s[slow]] == 0) diff--;
-                slow++;
+                if (--counter[s[slow++]] == 0) diff--;
             }
+            maxd = max(maxd, fast - slow + 1);
         }
-        if (diff == 2) {
-            ans = max(ans, n - slow);
-        }
-        if (diff < 2) {
-            ans = n;
-        }
-        return ans;
+        return maxd;
     }
 };

@@ -46,36 +46,36 @@
 class Solution {
 public:
     vector<int> findMinHeightTrees(int n, vector<pair<int, int>>& edges) {
-        vector<unordered_set<int>> graph(n);
+        vector<vector<int>> graph(n);
         for (auto e: edges) {
-            graph[e.first].emplace(e.second);
-            graph[e.second].emplace(e.first);
+            graph[e.first].emplace_back(e.second);
+            graph[e.second].emplace_back(e.first);
         }
-        vector<int> degree(n, 0);
+        vector<int> degree(n);
+        queue<int> q;
         for (int i = 0; i < n; i++) {
             degree[i] = graph[i].size();
+            if (degree[i] <= 1) q.emplace(i);
         }
         int remain = n;
         while (remain > 2) {
-            vector<int> to_del;
-            for (int i = 0; i < n; i++) {
-                if (degree[i] == 1) {
-                    to_del.emplace_back(i);
-                    degree[i] = -1;
-                    remain--;
-                }
-            }
-            for (auto u: to_del) {
-                for (auto v: graph[u]) {
-                    degree[v]--;
+            int m = q.size();
+            remain -= m;
+            for (int i = 0; i < m; i++) {
+                int u = q.front();
+                q.pop();
+                degree[u]--;
+                for (int v: graph[u]) {
+                    if (--degree[v] == 1) {
+                        q.emplace(v);
+                    }
                 }
             }
         }
         vector<int> ans;
-        for (int i = 0; i < n; i++) {
-            if (degree[i] >= 0) {
-                ans.emplace_back(i);
-            }
+        while (!q.empty()) {
+            ans.emplace_back(q.front());
+            q.pop();
         }
         return ans;
     }

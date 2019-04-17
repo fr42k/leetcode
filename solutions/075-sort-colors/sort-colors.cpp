@@ -23,15 +23,31 @@
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
-        int lt = 0, i = 0, ht = nums.size() - 1;
-        while (i <= ht) {
-            if (nums[i] < 1) {
-                swap(nums[lt++], nums[i++]);
-            } else if (nums[i] > 1) {
-                swap(nums[i], nums[ht--]);
-            } else {
-                i++;
-            }
+        myqsort(nums, 0, nums.size() - 1);
+    }
+    
+private:
+    void myqsort(vector<int>& nums, int l, int r) {
+        if (l >= r) {
+            return;
         }
+        int p = partition(nums, l, r);
+        myqsort(nums, l, p - 1);
+        myqsort(nums, p + 1, r);
+    }
+    int partition(vector<int>& nums, int a, int b) {
+        int pivot = nums[a];
+        while (a < b) {
+            while (a < b && nums[b] >= pivot) {
+                b--;
+            }
+            nums[a] = nums[b];
+            while (a < b && nums[a] <= pivot) {
+                a++;
+            }
+            nums[b] = nums[a];
+        }
+        nums[a] = pivot;
+        return a;
     }
 };

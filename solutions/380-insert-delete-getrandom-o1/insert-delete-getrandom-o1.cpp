@@ -46,31 +46,42 @@ public:
     
     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
     bool insert(int val) {
-        if (mem.count(val)) return false;
-        mem[val] = cache.size();
-        cache.emplace_back(val);
+        if (elem_pos.count(val)) {
+            return false;
+        }
+        elem_pos[val] = stock.size();
+        stock.emplace_back(val);
         return true;
     }
     
     /** Removes a value from the set. Returns true if the set contained the specified element. */
     bool remove(int val) {
-        if (!mem.count(val)) return false;
-        if (mem[val] != cache.size() - 1) {
-            int next = cache.back();
-            mem[next] = mem[val];
-            cache[mem[next]] = next;
+        auto iter = elem_pos.find(val);
+        if (iter != elem_pos.end()) {
+            int p = elem_pos[val];
+            int s = stock.size();
+            swap(stock[p], stock[s - 1]);
+            elem_pos[stock[p]] = p;
+            stock.pop_back();
+            elem_pos.erase(iter);
+            return true;
         }
-        mem.erase(val);
-        cache.pop_back();
-        return true;
+        return false;
     }
     
     /** Get a random element from the set. */
     int getRandom() {
-        return cache[rand() % cache.size()];
+        int s = stock.size() - 1;
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        std::uniform_int_distribution<> dis(0, s);
+        auto p = dis(gen);
+        return stock[p];
+        
     }
-    vector<int> cache;
-    unordered_map<int, int> mem;
+private:
+    unordered_map<int, int> elem_pos;
+    vector<int> stock;
 };
 
 /**

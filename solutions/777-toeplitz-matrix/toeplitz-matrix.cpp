@@ -55,14 +55,16 @@ class Solution {
 public:
     bool isToeplitzMatrix(vector<vector<int>>& matrix) {
         int m = matrix.size();
-        if (m <= 1) return true;
+        if (!m) return true;
         int n = matrix[0].size();
-        if (n <= 1) return true;
-        for (int i = 1; i < m; i++) {
-            for (int j = 1; j < n; j++) {
-                if (matrix[i][j] != matrix[i - 1][j - 1]) {
-                    return false;
-                }
+        if (!n) return true;
+        int k = min(m, n);
+        unordered_map<int, unordered_set<int>> asd;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                int idx = k - i + j - 1;
+                asd[idx].emplace(matrix[i][j]);
+                if (asd[idx].size() > 1) return false;
             }
         }
         return true;

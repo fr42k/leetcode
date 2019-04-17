@@ -37,23 +37,22 @@
 class Solution {
 public:
     string convert(string s, int numRows) {
-        if (s.empty() || numRows < 2) {
+        if (s.empty() || numRows <= 1) {
             return s;
         }
         int period = 2 * numRows - 2;
-        string result;
-        for (int i = 0; i < numRows; ++i) {
+        string ans;
+        for (int i = 0; i < numRows; i++) {
             for (int j = i; j < s.size(); j += period) {
-                result += s[j];
-                
-                if (i > 0 && i < numRows - 1) {
-                    int t = j + period - 2*i;
+                ans += s[j];
+                if (0 < i && i < numRows - 1) {
+                    int t = j + period - 2 * i;
                     if (t < s.size()) {
-                        result += s[t];
+                        ans += s[t];
                     }
                 }
             }
         }
-        return result;
+        return ans;
     }
 };

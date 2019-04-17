@@ -50,19 +50,17 @@ public:
         if (!seats.count(0)) {
             maxlen = *seats.begin();
         }
-        auto begin = seats.begin();
-        auto end = seats.end();
-        while (begin != end) {
-            int len = (*begin - prev) / 2;
+        auto it = seats.begin();
+        while (it != seats.end()) {
+            int len = (*it - prev) / 2;
             if (len > maxlen) {
                 maxlen = len;
-                cur = (*begin + prev) / 2;
+                cur = (*it + prev) / 2;
             }
-            prev = *begin;
-            begin++;
+            prev = *(it++);
         }
         if (!seats.count(n - 1)) {
-            int len = n - 1 - *seats.rbegin();
+            int len = (n - 1 - *seats.rbegin());
             if (len > maxlen) {
                 maxlen = len;
                 cur = n - 1;
@@ -71,6 +69,7 @@ public:
         seats.emplace(cur);
         return cur;
     }
+
     
     void leave(int p) {
         seats.erase(p);

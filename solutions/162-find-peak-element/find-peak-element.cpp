@@ -31,15 +31,19 @@
 class Solution {
 public:
     int findPeakElement(vector<int>& nums) {
-        int l = 0, h = nums.size() - 1;
-        while (l < h) {
-            int m = l + (h - l) / 2;
-            if (m + 1 < nums.size() && nums[m] > nums[m + 1]) {
-                h = m;
-            }  else {
-                l = m + 1;
-            }
+        return f(nums, 0, nums.size() - 1);
+    }
+private:
+    int f(vector<int>& nums, int l, int r) {
+        if (l >= r - 1) {
+            return nums[l] > nums[r] ? l: r;
         }
-        return l;
+        int m = (l+r)>> 1;
+        if (nums[m] > nums[m - 1] && nums[m] > nums[m + 1]) {
+            return m;
+        }
+        int fl = f(nums, l, m);
+        int fr = f(nums, m, r);
+        return nums[fl] > nums[fr] ? fl: fr;
     }
 };

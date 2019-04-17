@@ -35,29 +35,32 @@
 class Solution {
 public:
     vector<int> findOrder(int numCourses, vector<pair<int, int>>& prerequisites) {
-        vector<unordered_set<int>> graph(numCourses);
-        vector<int> degree(numCourses, 0);
-        for (auto p: prerequisites) {
-            degree[p.first]++;
-            graph[p.second].emplace(p.first);
+        vector<vector<int>> graph(numCourses);
+        vector<int> degree(numCourses);
+        for (auto v: prerequisites) {
+            graph[v.second].emplace_back(v.first);
+            degree[v.first]++;
         }
         queue<int> q;
         for (int i = 0; i < numCourses; i++) {
-            if (degree[i] == 0) q.emplace(i);
+            if (degree[i] == 0) {
+                q.emplace(i);
+            }
         }
         vector<int> ans;
         while (!q.empty()) {
-            int course = q.front();
+            auto u = q.front();
             q.pop();
-            ans.emplace_back(course);
-            for (int next: graph[course]) {
-                if (--degree[next] == 0) {
-                    q.emplace(next);
+            ans.emplace_back(u);
+            degree[u]--;
+            for (int v: graph[u]) {
+                if (--degree[v] == 0) {
+                    q.emplace(v);
                 }
             }
         }
         for (int i = 0; i < numCourses; i++) {
-            if (degree[i] > 0) return {};
+            if (degree[i] >= 0) return {};
         }
         return ans;
     }

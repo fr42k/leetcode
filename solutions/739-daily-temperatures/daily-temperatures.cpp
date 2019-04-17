@@ -14,8 +14,8 @@ class Solution {
 public:
     vector<int> dailyTemperatures(vector<int>& temperatures) {
         int n = temperatures.size();
+        if (!n) return {};
         vector<int> ans(n, 0);
-        /*
         stack<int> pos;
         for (int i = n - 1; i >= 0; i--) {
             while (!pos.empty() && temperatures[i] >= temperatures[pos.top()]) {
@@ -25,19 +25,6 @@ public:
                 ans[i] = pos.top() - i;
             }
             pos.emplace(i);
-        }
-        return ans;
-        */
-        vector<int> next(101, INT_MAX);
-        for (int i = n - 1; i >= 0; i--) {
-            int warm_idx = INT_MAX;
-            for (int t = temperatures[i] + 1; t <= 100; t++) {
-                if (next[t] < warm_idx) {
-                    warm_idx = next[t];
-                }
-            }
-            ans[i] = warm_idx == INT_MAX? 0: warm_idx - i;
-            next[temperatures[i]] = i;
         }
         return ans;
     }

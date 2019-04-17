@@ -28,43 +28,29 @@
 class Solution {
 public:
     int numIslands(vector<vector<char>>& grid) {
+        int cnt = 0;
         int m = grid.size();
         if (!m) return 0;
         int n = grid[0].size();
-        int ans = 0;
-        vector<int> uf(m * n, -1);
-        function<int (int)> ufind = [&](int k){
-            if (uf[k] != k) {
-                uf[k] = ufind(uf[k]);
-            }
-            return uf[k];
-        };
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
+        if (!n) return 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
                 if (grid[i][j] == '1') {
-                    ++ans;
-                    int idx = i * n + j;
-                    uf[idx] = idx;
-                    for (int k = 0; k < 4; ++k) {
-                        int x = i + dir[k], y = j + dir[k + 1];
-                        if (x < 0 || y < 0 || x >= m || y >= n || uf[x* n +y] == -1) continue;
-                        int nid = ufind(x * n + y);
-                        if (nid == idx) continue;
-                        --ans;
-                        uf[nid] = idx;
-                    }
+                    dfs(grid, i, j);
+                    cnt++;
                 }
             }
         }
-        return ans;
+        return cnt;
     }
-    void dfs(vector<vector<char>>& grid, int i, int j, int m, int n) {
-        if (i < 0 || j < 0 || i >= m || j >= n || grid[i][j] != '1') return;
-        grid[i][j] = '2';
-        for (int k = 0; k < 4; ++k) {
-            int x = i + dir[k], y = j + dir[k + 1];
-            dfs(grid, x, y, m, n);
+    vector<int> dir{0, 1, 0, -1, 0};
+    void dfs(vector<vector<char>>& grid, int i, int j) {
+        if (i < 0 || i >= grid.size() || j < 0 || j >= grid[0].size() || grid[i][j] != '1') {
+            return;
+        }
+        grid[i][j] = '#';
+        for (int k = 0; k < 4; k++) {
+            dfs(grid, i + dir[k], j + dir[k + 1]);
         }
     }
-    vector<int> dir{0, -1, 0, 1, 0};
 };

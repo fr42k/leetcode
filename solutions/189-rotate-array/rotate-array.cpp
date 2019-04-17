@@ -32,17 +32,11 @@
 class Solution {
 public:
     void rotate(vector<int>& nums, int k) {
-        int n = nums.size();
-        if (!n || k % n == 0) return;
-        k %= n;
-        /*
-        reverse(nums.begin(), nums.end());
-        reverse(nums.begin(), nums.begin() + k);
-        reverse(nums.begin() + k, nums.end());
-        */
-        vector<int> m(nums);
-        for (int i = 0; i < n; i++) {
-            nums[i] = m[(n - k + i) % n];
+        vector<int> n(nums);
+        int s = nums.size();
+        int p = k % s;
+        for (int i = 0; i < s; i++) {
+            nums[i] = n[(s - p + i) % s];
         }
     }
 };

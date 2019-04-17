@@ -30,22 +30,19 @@
 //
 //
 //
-//
 
 
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        if (s.empty()) return 0;
-        vector<int> dict(256, 0);
-        int maxlen = 1;
-        for (int slow = 0, fast = 0; fast < s.size(); fast++) {
-            if (dict[s[fast]]++ > 0) {
-                while (dict[s[fast]] > 1) {
-                    dict[s[slow++]]--;
-                }
+        vector<int> pos(256, -1);
+        int start = -1, maxlen = 0;
+        for (int i = 0; i < s.size(); i++) {
+            if (pos[s[i]] > start) {
+                start = pos[s[i]];
             }
-            maxlen = max(maxlen, fast - slow + 1);
+            pos[s[i]] = i;
+            maxlen = max(maxlen, i - start);
         }
         return maxlen;
     }

@@ -42,7 +42,6 @@
 class Solution {
 public:
     void gameOfLife(vector<vector<int>>& board) {
-        vector<vector<int>> dir{{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
         int m = board.size();
         if (!m) return;
         int n = board[0].size();
@@ -50,15 +49,20 @@ public:
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 int cnt = 0;
-                for (auto d: dir) {
-                    int x = i + d[0], y = j + d[1];
-                    if (x < 0 || y < 0 || x >= m || y >= n) continue;
-                    cnt += board[x][y] & 1;
+                for (int x = max(0, i - 1); x < min(m, i + 2); x++) {
+                    for (int y = max(0, j - 1); y < min(n, j + 2); y++) {
+                        cnt += (board[x][y] & 1);
+                    }
                 }
+                cnt -= (board[i][j] & 1);
                 if (board[i][j] & 1) {
-                    if (cnt == 2 || cnt == 3) board[i][j] = 3;
+                    if (2 <= cnt && cnt <= 3) {
+                        board[i][j] = 3;
+                    }
                 } else {
-                    if (cnt == 3) board[i][j] = 2;
+                    if (cnt == 3) {
+                        board[i][j] = 2;
+                    }
                 }
             }
         }

@@ -29,24 +29,25 @@
 class Solution {
 public:
     vector<vector<string>> solveNQueens(int n) {
-        vector<int> cols(n, 0), diag(2 * n - 1, 0), adiag(2 * n - 1, 0);
-        vector<string> board(n, string(n, '.'));
         vector<vector<string>> ans;
-        function<void (vector<string>&, int)> solve = [&](vector<string>& board, int row) {
-            if (row == n) {
-                ans.emplace_back(board);
-            } else {
-                for (int i = 0; i < n; ++i) {
-                    if (cols[i] || diag[row + i] || adiag[n - 1 - row + i]) continue;
-                    cols[i] = diag[row + i] = adiag[n - 1 - row + i] = 1;
-                    board[row][i] = 'Q';
-                    solve(board, row + 1);
-                    board[row][i] = '.';
-                    cols[i] = diag[row + i] = adiag[n - 1 - row + i] = 0;
-                }
-            }
-        };
-        solve(board, 0);
+        vector<string> board(n, string(n, '.'));
+        vector<int> avail(n + 2 * n - 1 + 2 * n - 1, 1);
+        search(board, avail, 0, ans);
         return ans;
+    }
+    void search(vector<string>& board, vector<int>& avail, int row, vector<vector<string>>& ans) {
+        int n = board.size();
+        if (row == n) {
+            ans.emplace_back(board);
+        }
+        for (int col = 0; col < n; col++) {
+            if (avail[col] && avail[n + row + col] && avail[3 * n - 1 + n - row + col - 1]) {
+                avail[col] = avail[n + row + col] = avail[3 * n - 1 + n - row + col - 1] = 0;
+                board[row][col] = 'Q';
+                search(board, avail, row + 1, ans);
+                board[row][col] = '.';
+                avail[col] = avail[n + row + col] = avail[3 * n - 1 + n - row + col - 1] = 1;
+            }
+        }
     }
 };

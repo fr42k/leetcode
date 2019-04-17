@@ -37,19 +37,20 @@
 class Solution {
 public:
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+        sort(candidates.begin(), candidates.end());
         vector<vector<int>> ans;
         cmb(candidates, target, 0, {}, ans);
         return ans;
     }
-    void cmb(vector<int>& candidates, int target, int idx, vector<int> path, vector<vector<int>>& ans) {
+    void cmb(vector<int>& nums, int target, int idx, vector<int> path, vector<vector<int>>& ans) {
         if (target == 0) {
             ans.emplace_back(path);
             return;
         }
-        for (int i = idx; i < candidates.size(); i++) {
-            if (candidates[i] > target) continue;
-            path.emplace_back(candidates[i]);
-            cmb(candidates, target - candidates[i], i, path, ans);
+        for (int i = idx; i < nums.size(); i++) {
+            if (nums[i] > target) break;
+            path.emplace_back(nums[i]);
+            cmb(nums, target - nums[i], i, path, ans);
             path.pop_back();
         }
     }
