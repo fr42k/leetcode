@@ -26,15 +26,16 @@
 class Solution {
 public:
     bool isStrobogrammatic(string num) {
-        int n = num.size();
-        for (int l = 0, h = n - 1; l <= h; ++l, --h) {
-            if (image.count(num[l]) && image[num[l]] == num[h]) {
-                continue;
-            } else {
-                return false;
-            }
+        unordered_map<char, char> mp;
+        mp['0'] = '0';
+        mp['1'] = '1';
+        mp['6'] = '9';
+        mp['8'] = '8';
+        mp['9'] = '6';
+        for (int l = 0, h = num.size() - 1; l <= h; l++, h--) {
+            if (!mp.count(num[l]) || !mp.count(num[h])) return false;
+            if (mp[num[l]] != num[h] || mp[num[h]] != num[l]) return false;
         }
         return true;
     }
-    unordered_map<char, char> image{{'0', '0'}, {'1', '1'}, {'6', '9'}, {'8', '8'}, {'9', '6'}};
 };
