@@ -25,16 +25,18 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        if (s.size() != t.size()) return false;
-        auto cnts = cnt(s);
-        auto cntt = cnt(t);
-        return cnts == cntt;
-    }
-    vector<int> cnt(string& s) {
-        vector<int> ans(26, 0);
-        for (char c: s) {
-            ans[c - 'a']++;
+        int sum = 0;
+        unordered_set<char> s1, s2;
+        int size = s.size();
+        if (size - t.size()) {
+            return false;
         }
-        return move(ans);
+        for (int i = 0; i < size; i++) {
+            sum += static_cast<int>(s[i]);
+            s1.emplace(s[i]);
+            sum -= static_cast<int>(t[i]);
+            s2.emplace(t[i]);
+        }
+        return sum? false: (s1 == s2? true: false);
     }
 };

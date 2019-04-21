@@ -21,14 +21,14 @@
 class Solution {
 public:
     vector<pair<int, int>> reconstructQueue(vector<pair<int, int>>& people) {
-        auto cmp = [] (const pair<int, int>& a, const pair<int, int>& b) {
-            return a.first == b.first ? a.second < b.second : a.first > b.first;
+        auto cmp = [](pair<int, int>& a, pair<int, int>& b) {
+            return a.first > b.first || (a.first == b.first && a.second < b.second);   
         };
         sort(people.begin(), people.end(), cmp);
-        vector<pair<int, int>> res;
-        for (auto& p: people) {
-            res.insert(res.begin() + p.second, p);
+        vector<pair<int, int>> ans;
+        for (auto p: people) {
+            ans.insert(ans.begin() + p.second, p);
         }
-        return move(res);
+        return ans;
     }
 };

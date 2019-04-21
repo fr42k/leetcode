@@ -27,6 +27,7 @@
 // Output: 4 
 // Explanation: The longest increasing path is [3, 4, 5, 6]. Moving diagonally is not allowed.
 //
+//
 
 
 class Solution {
@@ -36,8 +37,8 @@ public:
         if (!m) return 0;
         int n = matrix[0].size();
         if (!n) return 0;
-        int ans = 1;
         vector<vector<int>> cache(m, vector<int>(n, -1));
+        int ans = 1;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 ans = max(ans, dfs(matrix, i, j, m, n, cache));
@@ -45,6 +46,7 @@ public:
         }
         return ans;
     }
+    vector<int> dir{0, 1, 0, -1, 0};
     int dfs(vector<vector<int>>& matrix, int i, int j, int m, int n, vector<vector<int>>& cache) {
         if (cache[i][j] != -1) return cache[i][j];
         int ans = 1;
@@ -56,5 +58,4 @@ public:
         cache[i][j] = ans;
         return ans;
     }
-    vector<int> dir{0, 1, 0, -1, 0};
 };

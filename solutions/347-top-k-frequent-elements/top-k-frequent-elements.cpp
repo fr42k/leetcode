@@ -27,29 +27,31 @@
 class Solution {
 public:
     vector<int> topKFrequent(vector<int>& nums, int k) {
-        unordered_map<int, int> freq;
+        map<int, set<int>> r_m;
+        unordered_map<int, int> n_f;
+        r_m[1] = {};
         for (int n: nums) {
-            freq[n]++;
-        }
-        auto cmp = [](const pair<int, int>& a, const pair<int, int>& b){
-            return a.second > b.second;
-        };
-        priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(cmp)> min_pq(cmp);
-        for (pair<int, int> p: freq) {
-            if (min_pq.size() >= k) {
-                if (min_pq.top().second < p.second) {
-                    min_pq.pop();
-                    min_pq.emplace(p);
-                }
+            if (n_f.count(n)) {
+                r_m[++n_f[n]].emplace(n);
             } else {
-                min_pq.emplace(p);
+                n_f[n] = 1;
+                r_m[1].emplace(n);
             }
         }
-        vector<int> ans(k);
-        for (int i = k - 1; i >= 0; i--) {
-            ans[i] = min_pq.top().first;
-            min_pq.pop();
+        vector<int> res;
+        unordered_set<int> used;
+        for (auto iter = r_m.rbegin(); iter != r_m.rend(); iter++) {
+            auto rset = iter->second;
+            for (int j: rset) {
+                if (!used.count(j)) {
+                    res.emplace_back(j);
+                    used.emplace(j);
+                    if (res.size() == k) {
+                        return move(res);
+                    }
+                }
+            }
         }
-        return ans;
+        return move(res);
     }
 };

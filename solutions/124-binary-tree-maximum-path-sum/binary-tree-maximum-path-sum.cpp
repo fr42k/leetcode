@@ -43,13 +43,13 @@ class Solution {
 public:
     int maxPathSum(TreeNode* root) {
         int imax = INT_MIN;
-        search(root, imax);
+        subsum(root, imax);
         return imax;
     }
-    int search(TreeNode* root, int& imax) {
+    int subsum(TreeNode* root, int& imax) {
         if (!root) return INT_MIN;
-        int l = max(0, search(root->left, imax));
-        int r = max(0, search(root->right, imax));
+        int l = max(0, subsum(root->left, imax));
+        int r = max(0, subsum(root->right, imax));
         imax = max(imax, root->val + l + r);
         return root->val + max(l, r);
     }
