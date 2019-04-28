@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2019-04-27 22:56:06  
+Update time:  2019-04-28 05:12:37  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **788   /   982** problems  
+I have solved **788   /   986** problems  
 while there are **140** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
@@ -992,3 +992,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1095|[two-city-scheduling](https://leetcode.com/problems/two-city-scheduling)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/1095-two-city-scheduling/two-city-scheduling.cpp)||Easy|
 |1096|[maximum-sum-of-two-non-overlapping-subarrays](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/1096-maximum-sum-of-two-non-overlapping-subarrays/maximum-sum-of-two-non-overlapping-subarrays.cpp)||Medium|
 |1097|[stream-of-characters](https://leetcode.com/problems/stream-of-characters)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/1097-stream-of-characters/stream-of-characters.cpp)||Hard|
+|1103|[moving-stones-until-consecutive](https://leetcode.com/problems/moving-stones-until-consecutive)|||Easy|
+|1104|[coloring-a-border](https://leetcode.com/problems/coloring-a-border)|||Medium|
+|1105|[uncrossed-lines](https://leetcode.com/problems/uncrossed-lines)|||Medium|
+|1106|[escape-a-large-maze](https://leetcode.com/problems/escape-a-large-maze)|||Hard|
