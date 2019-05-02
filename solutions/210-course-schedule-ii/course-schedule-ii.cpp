@@ -36,26 +36,32 @@ class Solution {
 public:
     vector<int> findOrder(int numCourses, vector<pair<int, int>>& prerequisites) {
         vector<vector<int>> graph(numCourses);
-        vector<int> visited(numCourses, 0), onpath(numCourses, 0), ans;
-        for (auto e: prerequisites) {
-            graph[e.second].emplace_back(e.first);
+        vector<int> degree(numCourses);
+        for (auto v: prerequisites) {
+            graph[v.second].emplace_back(v.first);
+            degree[v.first]++;
         }
+        queue<int> q;
         for (int i = 0; i < numCourses; i++) {
-            if (!visited[i] && find_circle(graph, visited, onpath, i, ans)) {
-                return {};
+            if (degree[i] == 0) {
+                q.emplace(i);
             }
         }
-        reverse(ans.begin(), ans.end());
-        return ans;
-    }
-    bool find_circle(vector<vector<int>>& graph, vector<int>& visited, vector<int>& onpath, int idx, vector<int>& ans) {
-        if (visited[idx]) return false;
-        visited[idx] = onpath[idx] = 1;
-        for (int n: graph[idx]) {
-            if (onpath[n] || find_circle(graph, visited, onpath, n, ans)) return true;
+        vector<int> ans;
+        while (!q.empty()) {
+            auto u = q.front();
+            q.pop();
+            ans.emplace_back(u);
+            degree[u]--;
+            for (int v: graph[u]) {
+                if (--degree[v] == 0) {
+                    q.emplace(v);
+                }
+            }
         }
-        onpath[idx] = 0;
-        ans.emplace_back(idx);
-        return false;
+        for (int i = 0; i < numCourses; i++) {
+            if (degree[i] >= 0) return {};
+        }
+        return ans;
     }
 };
