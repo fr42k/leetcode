@@ -1,5 +1,5 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2019-05-10 02:00:37  
+Update time:  2019-05-10 08:17:48  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
 I have solved **788   /   990** problems  
 while there are **140** problems still locked.  
@@ -989,7 +989,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1092|[maximum-difference-between-node-and-ancestor](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/1092-maximum-difference-between-node-and-ancestor/maximum-difference-between-node-and-ancestor.cpp)||Medium|
 |1093|[recover-a-tree-from-preorder-traversal](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/1093-recover-a-tree-from-preorder-traversal/recover-a-tree-from-preorder-traversal.cpp)||Hard|
 |1094|[matrix-cells-in-distance-order](https://leetcode.com/problems/matrix-cells-in-distance-order)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/1094-matrix-cells-in-distance-order/matrix-cells-in-distance-order.cpp)||Easy|
-|1095|[two-city-scheduling](https://leetcode.com/problems/two-city-scheduling)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/1095-two-city-scheduling/two-city-scheduling.cpp)||Easy|
+|1095|[two-city-scheduling](https://leetcode.com/problems/two-city-scheduling)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/1095-two-city-scheduling/two-city-scheduling.cpp)|[:memo:](https://leetcode.com/articles/two-city-scheduling/)|Easy|
 |1096|[maximum-sum-of-two-non-overlapping-subarrays](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/1096-maximum-sum-of-two-non-overlapping-subarrays/maximum-sum-of-two-non-overlapping-subarrays.cpp)||Medium|
 |1097|[stream-of-characters](https://leetcode.com/problems/stream-of-characters)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/1097-stream-of-characters/stream-of-characters.cpp)||Hard|
 |1103|[moving-stones-until-consecutive](https://leetcode.com/problems/moving-stones-until-consecutive)|||Easy|
