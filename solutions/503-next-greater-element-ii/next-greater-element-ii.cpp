@@ -19,12 +19,12 @@ class Solution {
 public:
     vector<int> nextGreaterElements(vector<int>& nums) {
         int n = nums.size();
-        vector<int> ans(n, -1);
         stack<int> stk;
+        vector<int> ans(n, -1);
         for (int i = 0; i < 2 * n; i++) {
-            int num = nums[i % n];
-            while (!stk.empty() && num > nums[stk.top()]) {
-                ans[stk.top()] = num;
+            int e = nums[i % n];
+            while (!stk.empty() && e > nums[stk.top()]) {
+                ans[stk.top()] = e;
                 stk.pop();
             }
             if (i < n) stk.emplace(i);

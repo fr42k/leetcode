@@ -22,19 +22,28 @@
 class Solution {
 public:
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        vector<vector<int>> ans;
-        backtrack(nums, 0, {}, ans);
-        return ans;
+        set<vector<int>> sv;
+        int s = nums.size();
+        vector<int> tmp;
+        travel(nums, 0, s, &tmp, &sv);
+        vector<vector<int>> res;
+        for (auto k: sv) {
+            res.emplace_back(k);
+        }
+        return move(res);
     }
-    void backtrack(vector<int> nums, int idx, vector<int> path, vector<vector<int>>& ans) {
-        ans.emplace_back(path);
-        for (int i = idx; i < nums.size(); i++) {
-            if (i == idx || nums[i] != nums[i - 1]) {
-                path.emplace_back(nums[i]);
-                backtrack(nums, i + 1, path, ans);
-                path.pop_back();
-            }
+private:
+    void travel(const vector<int>& nums, int pos, int s, vector<int>* tmp, set<vector<int>>* sv) {
+        if (s > pos) {
+            travel(nums, pos + 1, s, tmp, sv);
+            tmp->emplace_back(nums[pos]);
+            travel(nums, pos + 1, s, tmp, sv);
+            tmp->pop_back();
+        } else {
+            auto p(*tmp);
+            sort(p.begin(), p.end());
+            sv->emplace(move(p));
+            return;
         }
     }
 };

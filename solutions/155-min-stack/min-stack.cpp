@@ -38,15 +38,16 @@ public:
     }
     
     void push(int x) {
-        if (mins.empty() || x <= mins.top()) {
-            mins.emplace(x);
+        if (cache.empty() || x <= imin.top()) {
+            imin.emplace(x);
         }
         cache.emplace(x);
     }
     
     void pop() {
-        if (cache.top() == mins.top()) {
-            mins.pop();
+        if (cache.empty()) return;
+        if (cache.top() == imin.top()) {
+            imin.pop();
         }
         cache.pop();
     }
@@ -56,9 +57,10 @@ public:
     }
     
     int getMin() {
-        return mins.top();
+        return imin.top();
     }
-    stack<int> cache, mins;
+    stack<int> cache;
+    stack<int> imin;
 };
 
 /**

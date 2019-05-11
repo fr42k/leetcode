@@ -15,6 +15,8 @@
 // Output: [[1,5]]
 // Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 //
+// NOTE: input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.
+//
 
 
 /**
@@ -29,17 +31,18 @@
 class Solution {
 public:
     vector<Interval> merge(vector<Interval>& intervals) {
-        int n = intervals.size();
-        if (!n) return {};
-        sort(intervals.begin(), intervals.end(), [](Interval& a, Interval& b){return a.start < b.start;});
+        if (intervals.empty()) return {};
+        auto cmp = [](Interval& a, Interval& b) {
+            return a.start < b.start;    
+        };
+        sort(intervals.begin(), intervals.end(), cmp);
         vector<Interval> ans;
         ans.emplace_back(intervals[0]);
-        for (int i = 1; i < n; i++) {
-            int ts = intervals[i].start, te = intervals[i].end;
-            if (ans.back().end < ts) {
+        for (int i = 1; i < intervals.size(); i++) {
+            if (ans.back().end < intervals[i].start) {
                 ans.emplace_back(intervals[i]);
             } else {
-                ans.back().end = max(ans.back().end, te);
+                ans.back().end = max(ans.back().end, intervals[i].end);
             }
         }
         return ans;
