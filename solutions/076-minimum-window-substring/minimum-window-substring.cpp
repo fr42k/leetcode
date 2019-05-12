@@ -13,31 +13,32 @@
 // 	If there is no such window in S that covers all characters in T, return the empty string "".
 // 	If there is such window, you are guaranteed that there will always be only one unique minimum window in S.
 //
+//
 
 
 class Solution {
 public:
     string minWindow(string s, string t) {
-        vector<int> freq(256, 0);
-        for (char& c: t) {
-            ++freq[c];
+        int minlen = INT_MAX, start = -1;
+        vector<int> cnt(256);
+        for (char c: t) {
+            cnt[c]++;
         }
-        int head = -1, len = s.size() + 1;
-        for (int slow = 0, fast = 0, cnt = 0; fast < s.size(); ++fast) {
-            if (freq[s[fast]]-- > 0) {
-                ++cnt;
+        for (int slow = 0, fast = 0, diff = 0; fast < s.size(); fast++) {
+            if (cnt[s[fast]]-- > 0) {
+                diff++;
             }
-            while (cnt == t.size()) {
-                int curlen = fast - slow + 1;
-                if (curlen < len) {
-                    len = curlen;
-                    head = slow;
+            while (diff >= t.size()) {
+                int len = fast - slow + 1;
+                if (len < minlen) {
+                    minlen = len;
+                    start = slow;
                 }
-                if (++freq[s[slow++]] > 0) {
-                    --cnt;
+                if (++cnt[s[slow++]] > 0) {
+                    diff--;
                 }
             }
         }
-        return head == -1? "": s.substr(head, len);
+        return start == -1? "": s.substr(start, minlen);
     }
 };
