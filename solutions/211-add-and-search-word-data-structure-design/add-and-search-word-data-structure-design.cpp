@@ -24,9 +24,10 @@
 //
 
 
-struct Trie {
-    bool w;
+class Trie {
+public:
     vector<Trie*> next;
+    bool w;
     Trie(): w(false) {
         next.resize(26);
     }
@@ -41,7 +42,7 @@ public:
     /** Adds a word into the data structure. */
     void addWord(string word) {
         auto p = root;
-        for (char& c: word) {
+        for (char c: word) {
             if (!p->next[c - 'a']) {
                 p->next[c - 'a'] = new Trie();
             }
@@ -52,20 +53,27 @@ public:
     
     /** Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. */
     bool search(string word) {
-        return query(word, 0, root);
+        auto p = root;
+        return query(word, p);
     }
-    bool query(string& s, int pos, Trie* p) {
-        if (pos == s.size() && p) {
-            return p->w;
-        }
-        if (s[pos] == '.') {
-            for (int i = 0; i < 26; ++i) {
-                if (p->next[i] && query(s, pos + 1, p->next[i])) return true;
+    bool query(string word, Trie* p) {
+        for (int i = 0; i < word.size(); i++) {
+            if (word[i] == '.') {
+                for (int j = 0; j < 26; j++) {
+                    if (p->next[j] && query(word.substr(i + 1), p->next[j])) {
+                        return true;
+                    }
+                }
+                return false;
+            } else {
+                if (p->next[word[i] - 'a']) {
+                    p = p->next[word[i] - 'a'];
+                } else {
+                    return false;
+                }
             }
-            return false;
-        } else {
-            return p->next[s[pos] - 'a'] && query(s, pos + 1, p->next[s[pos] - 'a']);
         }
+        return p && p->w;
     }
     Trie* root;
 };

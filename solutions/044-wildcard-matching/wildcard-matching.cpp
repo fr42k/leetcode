@@ -69,17 +69,15 @@ class Solution {
 public:
     bool isMatch(string s, string p) {
         int m = s.size(), n = p.size();
-        int i = 0, j = 0, last_i, last_star = -1;
+        int i = 0, j = 0, last_i = 0, last_star = -1;
         while (i < m) {
-            if (j < n && (s[i] == p[j] || '?' == p[j])) {
+            if (j < n && (s[i] == p[j] || p[j] == '?')) {
                 i++;
                 j++;
             } else if (j < n && p[j] == '*') {
-                // 先让空匹配*
                 last_i = i;
                 last_star = j++;
             } else if (last_star >= 0) {
-                //让 last_i 匹配 *
                 i = ++last_i;
                 j = last_star + 1;
             } else {
@@ -87,6 +85,6 @@ public:
             }
         }
         while (j < n && p[j] == '*') j++;
-        return j==n;
+        return j == n;
     }
 };
