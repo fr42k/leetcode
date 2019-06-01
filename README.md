@@ -1,8 +1,8 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2019-06-01 10:52:43  
+Update time:  2019-06-01 16:54:55  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **7   /   1002** problems  
-while there are **140** problems still locked.  
+I have solved **7   /   1015** problems  
+while there are **149** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
 If you are loving solving problems in leetcode, please contact me to enjoy it together!  
@@ -492,6 +492,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |507|[perfect-number](https://leetcode.com/problems/perfect-number)||[:memo:](https://leetcode.com/articles/perfect-number/)|Easy|
 |508|[most-frequent-subtree-sum](https://leetcode.com/problems/most-frequent-subtree-sum)|||Medium|
 |509|[inorder-successor-in-bst-ii](https://leetcode.com/problems/inorder-successor-in-bst-ii)|:lock:||Medium|
+|511|[all-paths-from-source-lead-to-destination](https://leetcode.com/problems/all-paths-from-source-lead-to-destination)|:lock:||Hard|
 |513|[find-bottom-left-tree-value](https://leetcode.com/problems/find-bottom-left-tree-value)|||Medium|
 |514|[freedom-trail](https://leetcode.com/problems/freedom-trail)|||Hard|
 |515|[find-largest-value-in-each-tree-row](https://leetcode.com/problems/find-largest-value-in-each-tree-row)|||Medium|
@@ -968,18 +969,30 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1048|[clumsy-factorial](https://leetcode.com/problems/clumsy-factorial)|||Medium|
 |1049|[minimum-domino-rotations-for-equal-row](https://leetcode.com/problems/minimum-domino-rotations-for-equal-row)||[:memo:](https://leetcode.com/articles/minimum-domino-rotations-for-equal-row/)|Medium|
 |1050|[construct-binary-search-tree-from-preorder-traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal)||[:memo:](https://leetcode.com/articles/construct-bst-from-preorder-traversal/)|Medium|
+|1051|[shortest-way-to-form-string](https://leetcode.com/problems/shortest-way-to-form-string)|:lock:||Medium|
+|1052|[campus-bikes](https://leetcode.com/problems/campus-bikes)|:lock:||Medium|
+|1053|[minimize-rounding-error-to-meet-target](https://leetcode.com/problems/minimize-rounding-error-to-meet-target)|:lock:||Medium|
 |1054|[complement-of-base-10-integer](https://leetcode.com/problems/complement-of-base-10-integer)|||Easy|
 |1055|[pairs-of-songs-with-total-durations-divisible-by-60](https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60)|||Easy|
 |1056|[capacity-to-ship-packages-within-d-days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days)|||Medium|
 |1057|[numbers-with-repeated-digits](https://leetcode.com/problems/numbers-with-repeated-digits)|||Hard|
+|1058|[lexicographically-smallest-equivalent-string](https://leetcode.com/problems/lexicographically-smallest-equivalent-string)|:lock:||Medium|
+|1059|[missing-element-in-sorted-array](https://leetcode.com/problems/missing-element-in-sorted-array)|:lock:||Medium|
+|1060|[longest-repeating-substring](https://leetcode.com/problems/longest-repeating-substring)|:lock:||Medium|
+|1061|[number-of-valid-subarrays](https://leetcode.com/problems/number-of-valid-subarrays)|:lock:||Hard|
 |1062|[partition-array-into-three-parts-with-equal-sum](https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum)|||Easy|
 |1063|[best-sightseeing-pair](https://leetcode.com/problems/best-sightseeing-pair)|||Medium|
 |1064|[smallest-integer-divisible-by-k](https://leetcode.com/problems/smallest-integer-divisible-by-k)|||Medium|
 |1065|[binary-string-with-substrings-representing-1-to-n](https://leetcode.com/problems/binary-string-with-substrings-representing-1-to-n)|||Medium|
+|1066|[fixed-point](https://leetcode.com/problems/fixed-point)|||Easy|
+|1067|[campus-bikes-ii](https://leetcode.com/problems/campus-bikes-ii)|||Medium|
+|1068|[digit-count-in-range](https://leetcode.com/problems/digit-count-in-range)|||Hard|
+|1069|[confusing-number](https://leetcode.com/problems/confusing-number)|:lock:||Easy|
 |1070|[convert-to-base-2](https://leetcode.com/problems/convert-to-base-2)|||Medium|
 |1071|[binary-prefix-divisible-by-5](https://leetcode.com/problems/binary-prefix-divisible-by-5)|||Easy|
 |1072|[next-greater-node-in-linked-list](https://leetcode.com/problems/next-greater-node-in-linked-list)|||Medium|
 |1073|[number-of-enclaves](https://leetcode.com/problems/number-of-enclaves)|||Medium|
+|1075|[index-pairs-of-a-string](https://leetcode.com/problems/index-pairs-of-a-string)|||Easy|
 |1078|[remove-outermost-parentheses](https://leetcode.com/problems/remove-outermost-parentheses)|||Easy|
 |1079|[sum-of-root-to-leaf-binary-numbers](https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers)|||Easy|
 |1080|[camelcase-matching](https://leetcode.com/problems/camelcase-matching)|||Medium|
