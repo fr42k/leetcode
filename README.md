@@ -1,8 +1,8 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2019-06-01 22:57:09  
+Update time:  2019-06-02 04:59:36  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **7   /   1015** problems  
-while there are **149** problems still locked.  
+I have solved **7   /   1019** problems  
+while there are **153** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
 If you are loving solving problems in leetcode, please contact me to enjoy it together!  
@@ -984,15 +984,15 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1063|[best-sightseeing-pair](https://leetcode.com/problems/best-sightseeing-pair)|||Medium|
 |1064|[smallest-integer-divisible-by-k](https://leetcode.com/problems/smallest-integer-divisible-by-k)|||Medium|
 |1065|[binary-string-with-substrings-representing-1-to-n](https://leetcode.com/problems/binary-string-with-substrings-representing-1-to-n)|||Medium|
-|1066|[fixed-point](https://leetcode.com/problems/fixed-point)|||Easy|
-|1067|[campus-bikes-ii](https://leetcode.com/problems/campus-bikes-ii)|||Medium|
-|1068|[digit-count-in-range](https://leetcode.com/problems/digit-count-in-range)|||Hard|
+|1066|[fixed-point](https://leetcode.com/problems/fixed-point)|:lock:||Easy|
+|1067|[campus-bikes-ii](https://leetcode.com/problems/campus-bikes-ii)|:lock:||Medium|
+|1068|[digit-count-in-range](https://leetcode.com/problems/digit-count-in-range)|:lock:||Hard|
 |1069|[confusing-number](https://leetcode.com/problems/confusing-number)|:lock:||Easy|
 |1070|[convert-to-base-2](https://leetcode.com/problems/convert-to-base-2)|||Medium|
 |1071|[binary-prefix-divisible-by-5](https://leetcode.com/problems/binary-prefix-divisible-by-5)|||Easy|
 |1072|[next-greater-node-in-linked-list](https://leetcode.com/problems/next-greater-node-in-linked-list)|||Medium|
 |1073|[number-of-enclaves](https://leetcode.com/problems/number-of-enclaves)|||Medium|
-|1075|[index-pairs-of-a-string](https://leetcode.com/problems/index-pairs-of-a-string)|||Easy|
+|1075|[index-pairs-of-a-string](https://leetcode.com/problems/index-pairs-of-a-string)|:lock:||Easy|
 |1078|[remove-outermost-parentheses](https://leetcode.com/problems/remove-outermost-parentheses)|||Easy|
 |1079|[sum-of-root-to-leaf-binary-numbers](https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers)|||Easy|
 |1080|[camelcase-matching](https://leetcode.com/problems/camelcase-matching)|||Medium|
@@ -1025,3 +1025,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1138|[grumpy-bookstore-owner](https://leetcode.com/problems/grumpy-bookstore-owner)|||Medium|
 |1139|[previous-permutation-with-one-swap](https://leetcode.com/problems/previous-permutation-with-one-swap)|||Medium|
 |1140|[distant-barcodes](https://leetcode.com/problems/distant-barcodes)|||Medium|
+|1145|[number-of-submatrices-that-sum-to-target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target)|||Hard|
+|1146|[greatest-common-divisor-of-strings](https://leetcode.com/problems/greatest-common-divisor-of-strings)|||Easy|
+|1147|[flip-columns-for-maximum-number-of-equal-rows](https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows)|||Medium|
+|1148|[adding-two-negabinary-numbers](https://leetcode.com/problems/adding-two-negabinary-numbers)|||Medium|
