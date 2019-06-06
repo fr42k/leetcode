@@ -1,5 +1,5 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2019-06-05 23:36:04  
+Update time:  2019-06-06 05:38:45  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
 I have solved **8   /   1019** problems  
 while there are **153** problems still locked.  
@@ -491,7 +491,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |506|[relative-ranks](https://leetcode.com/problems/relative-ranks)|||Easy|
 |507|[perfect-number](https://leetcode.com/problems/perfect-number)||[:memo:](https://leetcode.com/articles/perfect-number/)|Easy|
 |508|[most-frequent-subtree-sum](https://leetcode.com/problems/most-frequent-subtree-sum)|||Medium|
-|509|[inorder-successor-in-bst-ii](https://leetcode.com/problems/inorder-successor-in-bst-ii)|:lock:||Medium|
+|509|[inorder-successor-in-bst-ii](https://leetcode.com/problems/inorder-successor-in-bst-ii)|:lock:|[:memo:](https://leetcode.com/articles/inorder-successor-in-a-bst-ii/)|Medium|
 |511|[all-paths-from-source-lead-to-destination](https://leetcode.com/problems/all-paths-from-source-lead-to-destination)|:lock:||Medium|
 |513|[find-bottom-left-tree-value](https://leetcode.com/problems/find-bottom-left-tree-value)|||Medium|
 |514|[freedom-trail](https://leetcode.com/problems/freedom-trail)|||Hard|
