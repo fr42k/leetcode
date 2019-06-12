@@ -1,5 +1,5 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2019-06-12 05:23:04  
+Update time:  2019-06-12 11:25:49  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
 I have solved **10   /   1023** problems  
 while there are **153** problems still locked.  
@@ -977,7 +977,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1056|[capacity-to-ship-packages-within-d-days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days)|||Medium|
 |1057|[numbers-with-repeated-digits](https://leetcode.com/problems/numbers-with-repeated-digits)|||Hard|
 |1058|[lexicographically-smallest-equivalent-string](https://leetcode.com/problems/lexicographically-smallest-equivalent-string)|:lock:||Medium|
-|1059|[missing-element-in-sorted-array](https://leetcode.com/problems/missing-element-in-sorted-array)|:lock:||Medium|
+|1059|[missing-element-in-sorted-array](https://leetcode.com/problems/missing-element-in-sorted-array)|:lock:|[:memo:](https://leetcode.com/articles/missing-element-in-sorted-array/)|Medium|
 |1060|[longest-repeating-substring](https://leetcode.com/problems/longest-repeating-substring)|:lock:||Medium|
 |1061|[number-of-valid-subarrays](https://leetcode.com/problems/number-of-valid-subarrays)|:lock:||Hard|
 |1062|[partition-array-into-three-parts-with-equal-sum](https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum)|||Easy|
