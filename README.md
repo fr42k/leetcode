@@ -1,5 +1,5 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2019-06-13 15:38:34  
+Update time:  2019-06-13 21:41:11  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
 I have solved **10   /   1023** problems  
 while there are **153** problems still locked.  
@@ -702,7 +702,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |769|[largest-plus-sign](https://leetcode.com/problems/largest-plus-sign)||[:memo:](https://leetcode.com/articles/largest-plus-sign/)|Medium|
 |770|[couples-holding-hands](https://leetcode.com/problems/couples-holding-hands)||[:memo:](https://leetcode.com/articles/couples-holding-hands/)|Hard|
 |771|[encode-n-ary-tree-to-binary-tree](https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree)|:lock:||Hard|
-|772|[construct-quad-tree](https://leetcode.com/problems/construct-quad-tree)|||Easy|
+|772|[construct-quad-tree](https://leetcode.com/problems/construct-quad-tree)|||Medium|
 |773|[quad-tree-intersection](https://leetcode.com/problems/quad-tree-intersection)|||Easy|
 |774|[maximum-depth-of-n-ary-tree](https://leetcode.com/problems/maximum-depth-of-n-ary-tree)||[:memo:](https://leetcode.com/articles/maximum-depth-of-n-ary-tree/)|Easy|
 |775|[n-ary-tree-preorder-traversal](https://leetcode.com/problems/n-ary-tree-preorder-traversal)||[:memo:](https://leetcode.com/articles/n-ary-tree-preorder-traversal/)|Easy|
