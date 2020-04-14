@@ -1,5 +1,5 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-04-14 10:07:59  
+Update time:  2020-04-14 16:29:18  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
 I have solved **792   /   1293** problems  
 while there are **207** problems still locked.  
@@ -539,7 +539,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |562|[longest-line-of-consecutive-one-in-matrix](https://leetcode.com/problems/longest-line-of-consecutive-one-in-matrix)|:lock:|[:memo:](https://leetcode.com/articles/longest-line-of-consecutive-one-in-matrix/)|Medium|
 |563|[binary-tree-tilt](https://leetcode.com/problems/binary-tree-tilt)||[:memo:](https://leetcode.com/articles/binary-tree-tilt/)|Easy|
 |564|[find-the-closest-palindrome](https://leetcode.com/problems/find-the-closest-palindrome)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/564-find-the-closest-palindrome/find-the-closest-palindrome.cpp)|[:memo:](https://leetcode.com/articles/find-the-closest-palindrome/)|Hard|
-|565|[array-nesting](https://leetcode.com/problems/array-nesting)||[:memo:](https://leetcode.com/articles/array-nesting/)|Medium|
+|565|[array-nesting](https://leetcode.com/problems/array-nesting)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/565-array-nesting/array-nesting.cpp)|[:memo:](https://leetcode.com/articles/array-nesting/)|Medium|
 |566|[reshape-the-matrix](https://leetcode.com/problems/reshape-the-matrix)||[:memo:](https://leetcode.com/articles/reshape-the-matrix/)|Easy|
 |567|[permutation-in-string](https://leetcode.com/problems/permutation-in-string)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/567-permutation-in-string/permutation-in-string.cpp)|[:memo:](https://leetcode.com/articles/short-permutation-in-a-long-string/)|Medium|
 |568|[maximum-vacation-days](https://leetcode.com/problems/maximum-vacation-days)|:lock:|[:memo:](https://leetcode.com/articles/maximum-vacation-days/)|Hard|
@@ -630,7 +630,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |686|[repeated-string-match](https://leetcode.com/problems/repeated-string-match)||[:memo:](https://leetcode.com/articles/repeated-string-match/)|Easy|
 |687|[longest-univalue-path](https://leetcode.com/problems/longest-univalue-path)||[:memo:](https://leetcode.com/articles/longest-univalue-path/)|Easy|
 |688|[knight-probability-in-chessboard](https://leetcode.com/problems/knight-probability-in-chessboard)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/688-knight-probability-in-chessboard/knight-probability-in-chessboard.cpp)|[:memo:](https://leetcode.com/articles/knight-probability-in-chessboard/)|Medium|
-|689|[maximum-sum-of-3-non-overlapping-subarrays](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays)||[:memo:](https://leetcode.com/articles/maximum-sum-of-3-non-overlapping-intervals/)|Hard|
+|689|[maximum-sum-of-3-non-overlapping-subarrays](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/689-maximum-sum-of-3-non-overlapping-subarrays/maximum-sum-of-3-non-overlapping-subarrays.cpp)|[:memo:](https://leetcode.com/articles/maximum-sum-of-3-non-overlapping-intervals/)|Hard|
 |690|[employee-importance](https://leetcode.com/problems/employee-importance)||[:memo:](https://leetcode.com/articles/employee-importance/)|Easy|
 |691|[stickers-to-spell-word](https://leetcode.com/problems/stickers-to-spell-word)||[:memo:](https://leetcode.com/articles/stickers-to-spell-word/)|Hard|
 |692|[top-k-frequent-words](https://leetcode.com/problems/top-k-frequent-words)||[:memo:](https://leetcode.com/articles/top-k-frequent-words/)|Medium|
@@ -879,7 +879,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |953|[reverse-only-letters](https://leetcode.com/problems/reverse-only-letters)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/953-reverse-only-letters/reverse-only-letters.cpp)|[:memo:](https://leetcode.com/articles/reverse-only-letters/)|Easy|
 |954|[maximum-sum-circular-subarray](https://leetcode.com/problems/maximum-sum-circular-subarray)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/954-maximum-sum-circular-subarray/maximum-sum-circular-subarray.cpp)|[:memo:](https://leetcode.com/articles/maximum-sub-circular-subarray/)|Medium|
 |955|[complete-binary-tree-inserter](https://leetcode.com/problems/complete-binary-tree-inserter)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/955-complete-binary-tree-inserter/complete-binary-tree-inserter.cpp)|[:memo:](https://leetcode.com/articles/complete-binary-tree-inserter/)|Medium|
-|956|[number-of-music-playlists](https://leetcode.com/problems/number-of-music-playlists)||[:memo:](https://leetcode.com/articles/number-of-music-playlists/)|Hard|
+|956|[number-of-music-playlists](https://leetcode.com/problems/number-of-music-playlists)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/956-number-of-music-playlists/number-of-music-playlists.cpp)|[:memo:](https://leetcode.com/articles/number-of-music-playlists/)|Hard|
 |957|[minimum-add-to-make-parentheses-valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid)||[:memo:](https://leetcode.com/articles/minimum-add-to-make-parentheses-valid/)|Medium|
 |958|[sort-array-by-parity-ii](https://leetcode.com/problems/sort-array-by-parity-ii)||[:memo:](https://leetcode.com/articles/sort-array-by-parity-ii/)|Easy|
 |959|[3sum-with-multiplicity](https://leetcode.com/problems/3sum-with-multiplicity)||[:memo:](https://leetcode.com/articles/3sum-with-multiplicity/)|Medium|
