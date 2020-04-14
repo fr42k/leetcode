@@ -14,24 +14,29 @@
 // Input: a = "1010", b = "1011"
 // Output: "10101"
 //
+//  
+// Constraints:
+//
+//
+// 	Each string consists only of '0' or '1' characters.
+// 	1 <= a.length, b.length <= 10^4
+// 	Each string is either "0" or doesn't contain any leading zero.
+//
+//
 
 
 class Solution {
 public:
     string addBinary(string a, string b) {
-        int m = a.size(), n = b.size();
-        int i = m - 1, j = n - 1, c = 0;
+        int i = a.size() - 1, j = b.size() - 1;
+        int c = 0;
         string ans;
-        while (i >= 0 || j >= 0 || c) {
-            int val = c;
-            if (i >= 0) {
-                val += a[i--] - '0';
-            }
-            if (j >= 0) {
-                val += b[j--] - '0';
-            }
-            c = val / 2;
-            ans.insert(ans.begin(), 1, val % 2 + '0');
+        while (c || i >= 0 || j >= 0) {
+            int sum = c;
+            if (i >= 0) sum += a[i--] - '0';
+            if (j >= 0) sum += b[j--] - '0';
+            c = sum / 2;
+            ans.insert(ans.begin(), sum % 2 + '0');
         }
         return ans;
     }

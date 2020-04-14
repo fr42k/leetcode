@@ -29,36 +29,34 @@
 class Solution {
 public:
     vector<int> findDiagonalOrder(vector<vector<int>>& matrix) {
-        vector<vector<int>> dir{{-1, 1}, {1, -1}};
         int m = matrix.size();
         if (!m) return {};
         int n = matrix[0].size();
-        if (!n) return {};
-        int i = 0, j = 0, k = 0;
-        vector<int> ans;
-        while (ans.size() < m * n) {
-            ans.emplace_back(matrix[i][j]);
-            i += dir[k][0];
-            j += dir[k][1];
-            if (i >= m) {
-                i = m - 1;
-                j += 2;
+        vector<int> ans(m * n);
+        vector<int> dir{-1, 1, -1};
+        int r = 0, c = 0, k = 0;
+        for (int i = 0; i < m * n; i++) {
+            ans[i] = matrix[r][c];
+            r += dir[k];
+            c += dir[k + 1];
+            if (r >= m) {
+                r = m - 1;
+                c += 2;
                 k = 1 - k;
             }
-            if (j >= n) {
-                j = n - 1;
-                i += 2;
+            if (c >= n) {
+                c = n - 1;
+                r += 2;
                 k = 1 - k;
             }
-            if (i < 0) {
-                i = 0;
+            if (r < 0) {
+                r = 0;
                 k = 1 - k;
             }
-            if (j < 0) {
-                j = 0;
+            if (c < 0) {
+                c = 0;
                 k = 1 - k;
             }
-            
         }
         return ans;
     }

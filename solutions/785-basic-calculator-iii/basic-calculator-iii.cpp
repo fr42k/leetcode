@@ -24,58 +24,53 @@
 class Solution {
 public:
     int calculate(string s) {
-        auto pos = s.find_first_not_of(' ');
-        if (pos == string::npos) return 0;
-        s = s.substr(pos);
-        if (s[0] == '-') s.insert(s.begin(), 1, '0');
+        if (s[0] == '-') s.insert(s.begin(), '0');
         while (s.find("(-") != string::npos) {
             auto p = s.find("(-");
-            s.insert(s.begin() + p + 1, 1, '0');
+            s.insert(s.begin() + p + 1, '0');
         }
-        stack<long> nums;
         stack<char> sym;
-        function<void ()> cal = [&](){
-            auto left = nums.top();
-            nums.pop();
-            auto& right = nums.top();
-            auto opr = sym.top();
-            sym.pop();
-            if (opr == '+') {
-                right += left;
-            } else if (opr == '-') {
-                right = left - right;
-            } else if (opr == '*') {
-                right *= left;
-            } else if (opr == '/') {
-                right = left / right;
-            }
-        };
-        for (int i = s.size() - 1; i >= 0; --i) {
+        stack<long> nums;
+        for (int i = s.size() - 1; i >= 0; i--) {
             if (s[i] == ' ') continue;
             if (isdigit(s[i])) {
                 int j = i;
-                while (i >= 0 and isdigit(s[i])) --i;
-                ++i;
+                while (i >= 0 && isdigit(s[i])) i--;
+                i++;
                 nums.emplace(stol(s.substr(i, j - i + 1)));
-            } else {
-                if (s[i] == '*' || s[i] == '/' || s[i] == ')') {
-                    sym.emplace(s[i]);
-                } else if (s[i] == '+' || s[i] == '-') {
-                    while (sym.size() && (sym.top() == '*' || sym.top() == '/')) {
-                        cal();
-                    }
-                    sym.emplace(s[i]);
-                } else if (s[i] == '(') {
-                    while (sym.size() && sym.top() != ')') {
-                        cal();
-                    }
-                    sym.pop();
+            } else if (s[i] == ')' || s[i] == '*' || s[i] == '/') {
+                sym.emplace(s[i]);
+            } else if (s[i] == '+' || s[i] == '-') {
+                while (!sym.empty() && (sym.top() == '*' || sym.top() == '/')) {
+                    cal(nums, sym);
                 }
+                sym.emplace(s[i]);
+            } else if (s[i] == '(') {
+                while (!sym.empty() && sym.top() != ')') {
+                    cal(nums, sym);
+                }
+                sym.pop();
             }
         }
-        while (sym.size()) {
-            cal();
+        while (!sym.empty()) {
+            cal(nums, sym);
         }
         return nums.empty()? 0: nums.top();
+    }
+    void cal(stack<long>& nums, stack<char>& sym) {
+        char opr = sym.top();
+        sym.pop();
+        long a = nums.top();
+        nums.pop();
+        long& b = nums.top();
+        if (opr == '+') {
+            b += a;
+        } else if (opr == '-') {
+            b = a - b;
+        } else if (opr == '*') {
+            b *= a;
+        } else if (opr == '/') {
+            b = a / b;
+        }
     }
 };

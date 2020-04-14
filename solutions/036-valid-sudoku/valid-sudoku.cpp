@@ -63,14 +63,14 @@
 class Solution {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
-        int used_row[9][9] = {0}, used_col[9][9] = {0}, used_blk[9][9] = {0};
+        int row[9][9] = {0}, col[9][9] = {0}, box[9][9] = {0};
         for (int i = 0; i < board.size(); i++) {
-            for (int j = 0; j < board[0].size(); j++) {
+            for (int j = 0; j < board[i].size(); j++) {
                 if (board[i][j] == '.') continue;
                 int k = i / 3 * 3 + j / 3;
-                int n = board[i][j] - '1';
-                if (used_row[i][n] || used_col[j][n] || used_blk[k][n]) return false;
-                used_row[i][n] = used_col[j][n] = used_blk[k][n] = 1;
+                char v = board[i][j] - '1';
+                if (row[i][v] || col[j][v] || box[k][v]) return false;
+                row[i][v] = col[j][v] = box[k][v] = 1;
             }
         }
         return true;

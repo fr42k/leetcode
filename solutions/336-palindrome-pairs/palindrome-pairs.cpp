@@ -19,37 +19,38 @@
 //
 //
 //
+//
 
 
 class Solution {
 public:
     vector<vector<int>> palindromePairs(vector<string>& words) {
-        unordered_map<string, int> pos;
+        unordered_map<string, int> mp;
         for (int i = 0; i < words.size(); i++) {
-            pos[words[i]] = i;
+            mp[words[i]] = i;
         }
         vector<vector<int>> ans;
         for (int i = 0; i < words.size(); i++) {
             for (int j = 0; j <= words[i].size(); j++) {
-                auto left = words[i].substr(0, j);
-                auto right = words[i].substr(j);
-                if (pal(left)) {
-                    string r(right.rbegin(), right.rend());
-                    if (pos.count(r) && pos[r] != i) {
-                        ans.emplace_back(vector<int>({pos[r], i}));
+                string s1(words[i].substr(0, j));
+                string s2(words[i].substr(j));
+                if (ispal(s1)) {
+                    string r2(s2.rbegin(), s2.rend());
+                    if (mp.count(r2) && mp[r2] != i) {
+                        ans.emplace_back(vector<int>{mp[r2], i});
                     }
                 }
-                if (!right.empty() && pal(right)) {
-                    string r(left.rbegin(), left.rend());
-                    if (pos.count(r) && pos[r] != i) {
-                        ans.emplace_back(vector<int>({i, pos[r]}));
+                if (ispal(s2) && !s2.empty()) {
+                    string r1(s1.rbegin(), s1.rend());
+                    if (mp.count(r1) && mp[r1] != i) {
+                        ans.emplace_back(vector<int>{i, mp[r1]});
                     }
                 }
             }
         }
         return ans;
     }
-    bool pal(string s) {
+    bool ispal(string& s) {
         for (int l = 0, h = s.size() - 1; l < h; l++, h--) {
             if (s[l] != s[h]) return false;
         }

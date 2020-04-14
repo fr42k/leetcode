@@ -22,57 +22,49 @@
 
 class Solution {
 public:
-    class Node {
-    public:
-        double v;
-        Node* parent;
-        Node(double val = 1.0): v(val) {
-            parent = this;
-        }
-    };
-    Node* ufind(Node* n) {
-        if (n->parent != n) {
-            n->parent = ufind(n->parent);
-        }
-        return n->parent;
-    }
-    void unon(unordered_map<string, Node*>& graph, Node* a, Node* b, double val) {
-        auto pa = ufind(a), pb = ufind(b);
-        double ratio = b->v * val / pa->v;
-        for (auto p: graph) {
-            if (ufind(p.second) == pa) {
-                p.second->v *= ratio;
-            }
-        }
-        pa->parent = pb;
-    }
     vector<double> calcEquation(vector<pair<string, string>> equations, vector<double>& values, vector<pair<string, string>> queries) {
-        unordered_map<string, Node*> graph;
+        unordered_map<string, string> uf;
+        unordered_map<string, double> val;
         for (int i = 0; i < values.size(); i++) {
-            auto a = equations[i].first, b = equations[i].second;
-            if (!graph.count(a) && !graph.count(b)) {
-                graph[a] = new Node(values[i]);
-                graph[b] = new Node();
-                graph[a]->parent = graph[b];
-            } else if (!graph.count(a)) {
-                graph[a] = new Node(values[i] * graph[b]->v);
-                graph[a]->parent = graph[b];
-            } else if (!graph.count(b)) {
-                graph[b] = new Node(graph[a]->v / values[i]);
-                graph[b]->parent = graph[a];
+            auto u = equations[i].first;
+            auto v = equations[i].second;
+            if (!uf.count(u) && !uf.count(v)) {
+                val[u] = values[i];
+                val[v] = 1.0;
+                uf[u] = uf[v] = u;
+            } else if (!uf.count(u)) {
+                val[u] = values[i] * val[v];
+                uf[u] = ufind(uf, v);
+            } else if (!uf.count(v)) {
+                val[v] = val[u] / values[i];
+                uf[v] = ufind(uf, u);
             } else {
-                unon(graph, graph[a], graph[b], values[i]);
+                auto pu = ufind(uf, u);
+                auto pv = ufind(uf, v);
+                double ratio = values[i] * val[v] / val[u];
+                for (auto& p: val) {
+                    if (ufind(uf, p.first) == pu) {
+                        p.second *= ratio;
+                    }
+                }
+                uf[pu] = pv;
             }
         }
         vector<double> ans;
-        for (auto p: queries) {
-            auto x = p.first, y = p.second;
-            if (!graph.count(x) || !graph.count(y) || ufind(graph[x]) != ufind(graph[y])) {
-                ans.emplace_back(-1);
+        for (auto q: queries) {
+            auto u = q.first, v = q.second;
+            if (!val.count(u) || !val.count(v) || ufind(uf, u) != ufind(uf, v)) {
+                ans.emplace_back(-1.0);
             } else {
-                ans.emplace_back(graph[x]->v / graph[y]->v);
+                ans.emplace_back(val[u] / val[v]);
             }
         }
         return ans;
+    }
+    string ufind(unordered_map<string, string>& uf, string k) {
+        if (uf[k] != k) {
+            uf[k] = ufind(uf, uf[k]);
+        }
+        return uf[k];
     }
 };

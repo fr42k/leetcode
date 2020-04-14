@@ -21,20 +21,25 @@ class Solution {
 public:
     vector<string> letterCombinations(string digits) {
         if (digits.empty()) return {};
-        vector<string> dict = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        vector<string> dict{"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
         vector<string> ans;
         ans.emplace_back("");
         for (char c: digits) {
-            if (c < '0' || c > '9') continue;
-            auto keys = dict[c - '0'];
-            if (keys.empty()) continue;
-            vector<string> tmp;
-            for (int i = 0; i < ans.size(); i++) {
-                for (int j = 0; j < keys.size(); j++) {
-                    tmp.emplace_back(ans[i] + keys[j]);
+            if (c < '0' || c > '9') {
+                for (int i = 0; i < ans.size(); i++) {
+                    ans[i] += c;
                 }
+            } else {
+                string vals(dict[c - '0']);
+                if (vals.empty()) continue;
+                vector<string> tmp;
+                for (int i = 0; i < ans.size(); i++) {
+                    for (char z: vals) {
+                        tmp.emplace_back(ans[i] + z);
+                    }
+                }
+                ans.swap(tmp);
             }
-            ans.swap(tmp);
         }
         return ans;
     }

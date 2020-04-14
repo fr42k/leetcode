@@ -40,21 +40,21 @@
 class Solution {
 public:
     bool checkValidString(string s) {
-        int low = 0, high = 0;
+        int lower = 0, higher = 0;
         for (char c: s) {
             if (c == '(') {
-                low++;
-                high++;
+                lower++;
+                higher++;
             } else if (c == ')') {
-                low--;
-                high--;
+                lower--;
+                higher--;
             } else if (c == '*') {
-                low--;
-                high++;
+                lower--;
+                higher++;
             }
-            low = max(0, low);
-            if (high < 0) return false;
+            lower = max(0, lower);
+            if (higher < 0) return false;
         }
-        return low == 0;
+        return lower == 0;
     }
 };

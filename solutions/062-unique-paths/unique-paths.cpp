@@ -7,8 +7,7 @@
 //
 // Above is a 7 x 3 grid. How many possible unique paths are there?
 //
-// Note: m and n will be at most 100.
-//
+//  
 // Example 1:
 //
 //
@@ -27,15 +26,29 @@
 // Input: m = 7, n = 3
 // Output: 28
 //
+//
+//  
+// Constraints:
+//
+//
+// 	1 <= m, n <= 100
+// 	It's guaranteed that the answer will be less than or equal to 2 * 10 ^ 9.
+//
+//
 
 
 class Solution {
 public:
     int uniquePaths(int m, int n) {
-        vector<int> dp(n, 1);
-        for (int i = 1; i < m; i++) {
+        vector<int> dp(n, 0);
+        dp[0] = 1;
+        for (int i = 0; i < m; i++) {
+            int prev = dp[0];
+            dp[0] = 1;
             for (int j = 1; j < n; j++) {
-                dp[j] = dp[j] + dp[j - 1];
+                int top = dp[j];
+                dp[j] = top + dp[j - 1];
+                prev = top;
             }
         }
         return dp.back();

@@ -26,33 +26,30 @@
 
 class Solution {
 public:
-    double findKth(vector<int>& nums1, vector<int>& nums2, int k, int shift1, int shift2) {
-        if (nums1.size() - shift1 > nums2.size() - shift2) {
-            return findKth(nums2, nums1, k, shift2, shift1);
-        }
-        if (nums1.size() == shift1) {
-            return nums2[k - 1 + shift2];
-        }
-        if (k == 1) {
-            return min(nums1[shift1], nums2[shift2]);
-        }
-        int pa = min(static_cast<int>(nums1.size() - shift1), k/2);
-        int pb = k - pa;
-        if (nums1[pa - 1 + shift1] < nums2[pb -1 + shift2]) {
-            return findKth(nums1, nums2, pb, shift1 + pa, shift2);
-        } else if (nums1[pa - 1 + shift1] > nums2[pb -1 + shift2]) {
-            return findKth(nums1, nums2, pa, shift1, shift2 + pb);
-        } else {
-            return nums1[pa - 1 + shift1];
-        }
-    }
-
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
-        int total_l = nums1.size() + nums2.size();
-        if (total_l & 0x1) {
-            return findKth(nums1, nums2, total_l / 2 + 1, 0, 0);
-        } else {
-            return (findKth(nums1, nums2, total_l / 2, 0, 0) + findKth(nums1, nums2, total_l / 2 + 1, 0, 0)) / 2.0;
+        int m = nums1.size(), n = nums2.size();
+        if (m > n) return findMedianSortedArrays(nums2, nums1);
+        int l = 0, h = m;
+        while (l <= h) {
+            int i = l + (h - l) / 2;
+            int j = (m + n + 1) / 2 - i;
+            int left1 = i? nums1[i - 1]: INT_MIN;
+            int right1 = i < m? nums1[i]: INT_MAX;
+            int left2 = j? nums2[j - 1]: INT_MIN;
+            int right2 = j < n? nums2[j]: INT_MAX;
+            if (left1 > right2) {
+                h = i - 1;
+            } else if (right1 < left2) {
+                l = i + 1;
+            } else {
+                int maxl = max(left1, left2);
+                int minr = min(right1, right2);
+                if ((m + n) & 1) {
+                    return maxl;
+                } else {
+                    return (maxl + minr) / 2.0;
+                }
+            }
         }
     }
 };

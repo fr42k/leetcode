@@ -46,13 +46,7 @@
 class Solution {
 public:
     void deleteNode(ListNode* node) {
-        if (node) {
-            auto next = node->next;
-            if (next) {
-                node->val = next->val;
-                node->next = next->next;
-                delete next;
-            }
-        }
+        node->val = node->next->val;
+        node->next = node->next->next;
     }
 };

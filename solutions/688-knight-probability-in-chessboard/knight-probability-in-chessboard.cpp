@@ -45,20 +45,15 @@ public:
             vector<vector<double>> next(N, vector<double>(N, 0));
             for (int i = 0; i < N; i++) {
                 for (int j = 0; j < N; j++) {
-                    for (auto v: dir) {
-                        int x = i + v[0];
-                        int y = j + v[1];
-                        if (valid(N, x, y)) {
-                            next[i][j] += dp[x][y];
-                        }
+                    for (auto d: dir) {
+                        int x = i + d[0], y = j + d[1];
+                        if (x < 0 || y < 0 || x >= N || y >= N) continue;
+                        next[i][j] += dp[x][y];
                     }
                 }
             }
-            dp = next;
+            dp.swap(next);
         }
         return dp[r][c] * 1.0 / pow(8, K);
-    }
-    inline bool valid(int N, int i, int j) {
-        return (i >= 0 && j >= 0 && i < N && j < N);
     }
 };

@@ -46,7 +46,6 @@
 //
 //
 // 	You may assume all letters are in lowercase.
-// 	You may assume that if a is a prefix of b, then a must appear before b in the given dictionary.
 // 	If the order is invalid, return an empty string.
 // 	There may be multiple valid order of letters, return any one of them is fine.
 //
@@ -56,35 +55,38 @@
 class Solution {
 public:
     string alienOrder(vector<string>& words) {
-        map<char, set<char>> suc, pre;
-        set<char> letters;
+        unordered_map<char, unordered_set<char>> pre, suc;
+        unordered_set<char> letters;
         string last;
-        for (auto s: words) {
-            letters.insert(s.begin(), s.end());
-            for (int i = 0; i < min(last.size(), s.size()); i++) {
-                char a = last[i], b = s[i];
-                if (a != b) {
-                    suc[a].emplace(b);
-                    pre[b].emplace(a);
+        for (auto& w: words) {
+            letters.insert(w.begin(), w.end());
+            for (int i = 0; i < min(last.size(), w.size()); i++) {
+                if (last[i] != w[i]) {
+                    suc[last[i]].emplace(w[i]);
+                    pre[w[i]].emplace(last[i]);
                     break;
                 }
             }
-            last = s;
+            last = w;
         }
-        set<char> nopre(letters);
-        for (auto p: pre) {
-            nopre.erase(p.first);
+        set<char> nopre(letters.begin(), letters.end());
+        for (auto it: pre) {
+            nopre.erase(it.first);
         }
         string ans;
-        while (!nopre.empty()) {
-            char c = *(nopre.begin());
-            nopre.erase(c);
-            ans += c;
-            for (char z: suc[c]) {
-                pre[z].erase(c);
-                if (pre[z].empty()) {
-                    pre.erase(z);
-                    nopre.emplace(z);
+        while (nopre.size()) {
+            int n = nopre.size();
+            for (int i = 0; i < n; i++) {
+                auto c = *nopre.begin();
+                nopre.erase(c);
+                ans += c;
+                for (char next: suc[c]) {
+                    if (!pre.count(next)) continue;
+                    pre[next].erase(c);
+                    if (pre[next].empty()) {
+                        pre.erase(next);
+                        nopre.emplace(next);
+                    }
                 }
             }
         }

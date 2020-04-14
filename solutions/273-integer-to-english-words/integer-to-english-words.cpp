@@ -33,11 +33,11 @@ class Solution {
 public:
     string numberToWords(int num) {
         if (!num) return "Zero";
-        string ans;
         int k = 0;
+        string ans;
         while (num) {
             if (num % 1000) {
-                ans = less1000(num % 1000) + thousand[k] + " " + ans; 
+                ans = less1000(num % 1000) + thousand[k] + ans;
             }
             k++;
             num /= 1000;
@@ -48,6 +48,10 @@ public:
         }
         return ans;
     }
+    vector<string> less20{"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
+    vector<string> tens{"", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
+    vector<string> thousand{" ", "Thousand ", "Million ", "Billion "};
+    
     string less1000(int num) {
         if (!num) {
             return "";
@@ -59,7 +63,4 @@ public:
             return less20[num / 100] + " Hundred " + less1000(num % 100);
         }
     }
-    vector<string> less20{"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
-    vector<string> tens{"", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
-    vector<string> thousand{"", "Thousand", "Million", "Billion"};
 };

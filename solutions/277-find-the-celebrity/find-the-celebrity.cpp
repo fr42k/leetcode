@@ -47,11 +47,11 @@ bool knows(int a, int b);
 class Solution {
 public:
     int findCelebrity(int n) {
-        if (n <= 1) return n;
         int candi = 0;
         for (int i = 1; i < n; i++) {
-            if (!knows(i, candi))
+            if (knows(candi, i) || !knows(i, candi)) {
                 candi = i;
+            }
         }
         for (int i = 0; i < n; i++) {
             if (i == candi) continue;

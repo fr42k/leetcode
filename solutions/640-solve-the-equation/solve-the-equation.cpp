@@ -50,28 +50,32 @@
 
 class Solution {
 public:
-    string solveEquation(string s) {
-        int n = s.size(), coeff = 0, b = 0, sign = 1, slow = 0;
-        for (int fast = 0; fast < n; fast++) {
-            if (s[fast] == '+' || s[fast] == '-') {
-                if (slow < fast) b += sign * stoi(s.substr(slow, fast - slow));
+    string solveEquation(string equation) {
+        int slow = 0, coeff = 0, b = 0, sign = 1;
+        for (int fast = 0; fast < equation.size(); fast++) {
+            if (equation[fast] == '+' || equation[fast] == '-') {
+                if (fast > slow) {
+                    b += sign * stoi(equation.substr(slow, fast - slow));
+                }
                 slow = fast;
-            } else if (s[fast] == 'x') {
-                if (slow == fast || s[fast - 1] == '+') {
+            } else if (equation[fast] == 'x') {
+                if (fast == slow || equation[fast - 1] == '+') {
                     coeff += sign;
-                } else if (s[fast - 1] == '-') {
+                } else if (equation[fast - 1] == '-') {
                     coeff -= sign;
                 } else {
-                    coeff += sign * stoi(s.substr(slow, fast - slow));
+                    coeff += sign * stoi(equation.substr(slow, fast - slow));
                 }
                 slow = fast + 1;
-            } else if (s[fast] == '=') {
-                if (slow < fast) b += sign * stoi(s.substr(slow, fast - slow));
+            } else if (equation[fast] == '=') {
+                if (fast > slow) {
+                    b += sign * stoi(equation.substr(slow, fast - slow));
+                }
                 sign = -1;
                 slow = fast + 1;
             }
         }
-        if (slow < n) b += sign * stoi(s.substr(slow));
+        if (slow < equation.size()) b += sign * stoi(equation.substr(slow));
         if (!coeff && !b) return "Infinite solutions";
         if (!coeff) return "No solution";
         int x = -b / coeff;

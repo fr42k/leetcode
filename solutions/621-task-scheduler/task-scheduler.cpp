@@ -15,8 +15,7 @@
 //
 //
 //  
-//
-// Note:
+// Constraints:
 //
 //
 // 	The number of tasks is in the range [1, 10000].
@@ -28,16 +27,16 @@
 class Solution {
 public:
     int leastInterval(vector<char>& tasks, int n) {
-        unordered_map<char, int> freq;
-        int maxfreq = 0;
-        for (char& c: tasks) {
-            maxfreq = max(maxfreq, ++freq[c]);
+        int most = 0;
+        int nn = tasks.size();
+        unordered_map<char, int> mp;
+        for (char c: tasks) {
+            most = max(most, ++mp[c]);
         }
-        int base = (maxfreq - 1) * (n + 1);
-        for (auto& it: freq) {
-            if (it.second == maxfreq) ++base;
+        int frame = (most - 1) * (n + 1);
+        for (auto p: mp) {
+            if (p.second == most) frame++;
         }
-        const int len = tasks.size();
-        return max(len, base);
+        return max(frame, nn);
     }
 };

@@ -20,26 +20,25 @@
 class Solution {
 public:
     string nearestPalindromic(string n) {
-        const int len = n.size();
-        set<long> cands;
-        long val = stol(n);
-        cands.emplace(pow(10, len - 1) - 1);
-        cands.emplace(pow(10, len) + 1);
-        int r = (len + 1) / 2;
-        string ori(n.substr(0, r));
-        for (int i = 0; i < 10; ++i) {
-            ori.back() = i + '0';
-            string r_ori(ori.rbegin(), ori.rend());
-            cands.emplace(stol(string(ori + ((len & 1)? r_ori.substr(1): r_ori))));
+        int l = n.size();
+        set<long> candidates;
+        candidates.emplace(long(pow(10, l - 1)) - 1);
+        candidates.emplace(long(pow(10, l)) + 1);
+        long prenum = stol(n.substr(0, (l + 1) / 2));
+        for (int i = -1; i <= 1; i++) {
+            string pre = to_string(prenum + i);
+            string candi = pre + string(pre.rbegin() + (l & 1), pre.rend());
+            candidates.emplace(stol(candi));
         }
-        cands.erase(val);
-        auto x = upper_bound(cands.begin(), cands.end(), val);
-        auto y = lower_bound(cands.begin(), cands.end(), val);
-        --x;
-        auto num = *x;
-        if (labs(num - val) > labs(*y - val)) {
-            num = *y;
+        long num = stol(n);
+        candidates.erase(num);
+        long diff = LONG_MAX, candi = 0;
+        for (auto& c: candidates) {
+            if (labs(c - num) < diff) {
+                diff = labs(c - num);
+                candi = c;
+            }
         }
-        return to_string(num);
+        return to_string(candi);
     }
 };
