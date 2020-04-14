@@ -38,17 +38,17 @@ public:
         auto spos = s.find_first_not_of(" ");
         if (spos == string::npos) return false;
         auto epos = s.find_last_not_of(" ");
-        s = s.substr(spos, epos - spos + 1);
-        bool numSaw = false, eSaw = false, pointSaw = false, eNum = true;
+        s = s.substr(spos, epos + 1 - spos);
+        bool numSaw(false), pointSaw(false), eSaw(false), eNum(true);
         for (int i = 0; i < s.size(); i++) {
-            if (isdigit(s[i])) {
+            if ('0' <= s[i] && s[i] <= '9') {
                 numSaw = true;
                 eNum = true;
             } else if (s[i] == '.') {
-                if (pointSaw || eSaw) return false;
+                if (eSaw || pointSaw) return false;
                 pointSaw = true;
             } else if (s[i] == 'e') {
-                if (eSaw || !numSaw) return false;
+                if (!numSaw || eSaw) return false;
                 eSaw = true;
                 eNum = false;
             } else if (s[i] == '+' || s[i] == '-') {
