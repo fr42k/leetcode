@@ -30,18 +30,18 @@ class Solution {
 public:
     int numDecodings(string s) {
         int n = s.size();
-        if (!n) return 0;
-        int f2 = 1, f1 = decodew(s.substr(0, 1));
+        if (n < 1) return n;
+        int f1 = decode(s.substr(0, 1)), f2 = 1;
         for (int i = 1; i < n; i++) {
-            int f3 = f1 * decodew(s.substr(i, 1)) + f2 * decodew(s.substr(i - 1, 2));
+            int t = f1 * decode(s.substr(i, 1)) + f2 * decode(s.substr(i - 1, 2));
             f2 = f1;
-            f1 = f3;
+            f1 = t;
         }
         return f1;
     }
-    int decodew(string s) {
+    int decode(string s) {
         if (s.size() == 1) {
-            return s[0] == '0'? 0: 1;
+            return s == "0"? 0: 1;
         } else {
             int n = stoi(s);
             return 10 <= n && n <= 26? 1: 0;
