@@ -1,5 +1,5 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-04-16 12:59:05  
+Update time:  2020-04-16 19:20:30  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
 I have solved **792   /   1293** problems  
 while there are **207** problems still locked.  
@@ -619,7 +619,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |675|[cut-off-trees-for-golf-event](https://leetcode.com/problems/cut-off-trees-for-golf-event)||[:memo:](https://leetcode.com/articles/cutoff-trees-for-golf-event/)|Hard|
 |676|[implement-magic-dictionary](https://leetcode.com/problems/implement-magic-dictionary)||[:memo:](https://leetcode.com/articles/implement-magic-dictionary/)|Medium|
 |677|[map-sum-pairs](https://leetcode.com/problems/map-sum-pairs)||[:memo:](https://leetcode.com/articles/map-sum-pairs/)|Medium|
-|678|[valid-parenthesis-string](https://leetcode.com/problems/valid-parenthesis-string)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/678-valid-parenthesis-string/valid-parenthesis-string.cpp)|[:memo:](https://leetcode.com/articles/valid-parenthesis-string/)|Medium|
+|678|[valid-parenthesis-string](https://leetcode.com/problems/valid-parenthesis-string)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/678-valid-parenthesis-string/valid-parenthesis-string.py) [Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/678-valid-parenthesis-string/valid-parenthesis-string.cpp)|[:memo:](https://leetcode.com/articles/valid-parenthesis-string/)|Medium|
 |679|[24-game](https://leetcode.com/problems/24-game)||[:memo:](https://leetcode.com/articles/24-game/)|Hard|
 |680|[valid-palindrome-ii](https://leetcode.com/problems/valid-palindrome-ii)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/680-valid-palindrome-ii/valid-palindrome-ii.cpp)|[:memo:](https://leetcode.com/articles/valid-palindrome-ii/)|Easy|
 |681|[next-closest-time](https://leetcode.com/problems/next-closest-time)|:lock:|[:memo:](https://leetcode.com/articles/next-closest-time/)|Medium|
