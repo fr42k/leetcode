@@ -15,20 +15,18 @@
 //
 // Input: [1,8,6,2,5,4,8,3,7]
 // Output: 49
-//
 
 
 class Solution {
 public:
     int maxArea(vector<int>& height) {
-        int water = 0;
-        int l = 0, h = height.size() - 1;
+        int l = 0, h = height.size() - 1, imax = 0;
         while (l < h) {
-            int lower = min(height[l], height[h]);
-            water = max(water, lower * (h - l));
-            while (l < h && height[l] <= lower) l++;
-            while (l < h && height[h] <= lower) h--;
+            int dist = h - l;
+            int lower = height[l] < height[h]? height[l++]: height[h--];
+            if (dist * lower <= imax) continue;
+            imax = max(imax, dist * lower);
         }
-        return water;
+        return imax;
     }
 };
