@@ -8,21 +8,33 @@
 #
 #
 #  
+# Example 1:
 #
-# Example:
 #
+# Input
+# ["MinStack","push","push","push","getMin","pop","top","getMin"]
+# [[],[-2],[0],[-3],[],[],[],[]]
 #
+# Output
+# [null,null,null,null,-3,null,0,-2]
+#
+# Explanation
 # MinStack minStack = new MinStack();
 # minStack.push(-2);
 # minStack.push(0);
 # minStack.push(-3);
-# minStack.getMin();   --> Returns -3.
+# minStack.getMin(); // return -3
 # minStack.pop();
-# minStack.top();      --> Returns 0.
-# minStack.getMin();   --> Returns -2.
+# minStack.top();    // return 0
+# minStack.getMin(); // return -2
 #
 #
 #  
+# Constraints:
+#
+#
+# 	Methods pop, top and getMin operations will always be called on non-empty stacks.
+#
 #
 
 
