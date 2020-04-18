@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-04-18 03:07:34  
+Update time:  2020-04-18 09:29:08  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **792   /   1293** problems  
+I have solved **792   /   1297** problems  
 while there are **207** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
@@ -1296,6 +1296,10 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1511|[count-number-of-teams](https://leetcode.com/problems/count-number-of-teams)|||Medium|
 |1512|[design-underground-system](https://leetcode.com/problems/design-underground-system)||[:memo:](https://leetcode.com/articles/design-underground-system/)|Medium|
 |1513|[find-all-good-strings](https://leetcode.com/problems/find-all-good-strings)|||Hard|
+|1514|[minimum-value-to-get-positive-step-by-step-sum](https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum)|||Easy|
+|1515|[find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k](https://leetcode.com/problems/find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k)|||Medium|
+|1516|[the-k-th-lexicographical-string-of-all-happy-strings-of-length-n](https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n)|||Medium|
+|1517|[restore-the-array](https://leetcode.com/problems/restore-the-array)|||Hard|
 |1519|[minimum-subsequence-in-non-increasing-order](https://leetcode.com/problems/minimum-subsequence-in-non-increasing-order)|||Easy|
 |1520|[number-of-steps-to-reduce-a-number-in-binary-representation-to-one](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one)|||Medium|
 |1522|[stone-game-iii](https://leetcode.com/problems/stone-game-iii)|||Hard|
