@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-04-18 15:50:37  
+Update time:  2020-04-18 22:12:05  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **792   /   1297** problems  
+I have solved **792   /   1301** problems  
 while there are **207** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
@@ -1307,3 +1307,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1525|[queries-on-a-permutation-with-key](https://leetcode.com/problems/queries-on-a-permutation-with-key)|||Medium|
 |1526|[html-entity-parser](https://leetcode.com/problems/html-entity-parser)|||Medium|
 |1527|[number-of-ways-to-paint-n-3-grid](https://leetcode.com/problems/number-of-ways-to-paint-n-3-grid)|||Hard|
+|1532|[reformat-the-string](https://leetcode.com/problems/reformat-the-string)|||Easy|
+|1533|[display-table-of-food-orders-in-a-restaurant](https://leetcode.com/problems/display-table-of-food-orders-in-a-restaurant)|||Medium|
+|1534|[minimum-number-of-frogs-croaking](https://leetcode.com/problems/minimum-number-of-frogs-croaking)|||Medium|
+|1535|[build-array-where-you-can-find-the-maximum-exactly-k-comparisons](https://leetcode.com/problems/build-array-where-you-can-find-the-maximum-exactly-k-comparisons)|||Hard|
