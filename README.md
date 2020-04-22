@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-04-22 00:12:54  
+Update time:  2020-04-22 06:21:02  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **1   /   1301** problems  
+I have solved **2   /   1301** problems  
 while there are **207** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
