@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-04-23 12:59:56  
+Update time:  2020-04-23 19:07:49  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **3   /   1301** problems  
+I have solved **4   /   1301** problems  
 while there are **207** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
@@ -10,7 +10,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 
 | # | Title | My Solution | Official Solution | Difficulty |  
 |:---:|:---:|:---:|:---:|:---:|
-|1|[two-sum](https://leetcode.com/problems/two-sum)||[:memo:](https://leetcode.com/articles/two-sum/)|Easy|
+|1|[two-sum](https://leetcode.com/problems/two-sum)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/001-two-sum/two-sum.py)|[:memo:](https://leetcode.com/articles/two-sum/)|Easy|
 |2|[add-two-numbers](https://leetcode.com/problems/add-two-numbers)||[:memo:](https://leetcode.com/articles/add-two-numbers/)|Medium|
 |3|[longest-substring-without-repeating-characters](https://leetcode.com/problems/longest-substring-without-repeating-characters)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/003-longest-substring-without-repeating-characters/longest-substring-without-repeating-characters.cpp)|[:memo:](https://leetcode.com/articles/longest-substring-without-repeating-characters/)|Medium|
 |4|[median-of-two-sorted-arrays](https://leetcode.com/problems/median-of-two-sorted-arrays)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/004-median-of-two-sorted-arrays/median-of-two-sorted-arrays.cpp)|[:memo:](https://leetcode.com/articles/median-of-two-sorted-arrays/)|Hard|
