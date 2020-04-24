@@ -32,29 +32,31 @@ public:
         int m = matrix.size();
         if (!m) return {};
         int n = matrix[0].size();
-        vector<int> ans(m * n);
+        if (!n) return {};
+        int total = m * n;
+        vector<int> ans;
+        int i = 0, j = 0, k = 0;
         vector<int> dir{-1, 1, -1};
-        int r = 0, c = 0, k = 0;
-        for (int i = 0; i < m * n; i++) {
-            ans[i] = matrix[r][c];
-            r += dir[k];
-            c += dir[k + 1];
-            if (r >= m) {
-                r = m - 1;
-                c += 2;
+        while (i * n + j < total) {
+            ans.emplace_back(matrix[i][j]);
+            i += dir[k];
+            j += dir[k + 1];
+            if (i >= m) {
+                i = m - 1;
+                j += 2;
                 k = 1 - k;
             }
-            if (c >= n) {
-                c = n - 1;
-                r += 2;
+            if (j >= n) {
+                j = n - 1;
+                i += 2;
                 k = 1 - k;
             }
-            if (r < 0) {
-                r = 0;
+            if (i < 0) {
+                i = 0;
                 k = 1 - k;
             }
-            if (c < 0) {
-                c = 0;
+            if (j < 0) {
+                j = 0;
                 k = 1 - k;
             }
         }

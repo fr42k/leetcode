@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-04-24 01:15:29  
+Update time:  2020-04-24 07:37:07  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **4   /   1301** problems  
+I have solved **792   /   1301** problems  
 while there are **207** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
@@ -63,7 +63,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |51|[n-queens](https://leetcode.com/problems/n-queens)||[:memo:](https://leetcode.com/articles/n-queens/)|Hard|
 |52|[n-queens-ii](https://leetcode.com/problems/n-queens-ii)||[:memo:](https://leetcode.com/articles/n-queens-ii/)|Hard|
 |53|[maximum-subarray](https://leetcode.com/problems/maximum-subarray)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/053-maximum-subarray/maximum-subarray.py)|[:memo:](https://leetcode.com/articles/maximum-subarray/)|Easy|
-|54|[spiral-matrix](https://leetcode.com/problems/spiral-matrix)||[:memo:](https://leetcode.com/articles/spiral-matrix/)|Medium|
+|54|[spiral-matrix](https://leetcode.com/problems/spiral-matrix)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/054-spiral-matrix/spiral-matrix.cpp)|[:memo:](https://leetcode.com/articles/spiral-matrix/)|Medium|
 |55|[jump-game](https://leetcode.com/problems/jump-game)||[:memo:](https://leetcode.com/articles/jump-game/)|Medium|
 |56|[merge-intervals](https://leetcode.com/problems/merge-intervals)||[:memo:](https://leetcode.com/articles/merge-intervals/)|Medium|
 |57|[insert-interval](https://leetcode.com/problems/insert-interval)||[:memo:](https://leetcode.com/articles/insert-interval/)|Hard|
@@ -155,7 +155,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |143|[reorder-list](https://leetcode.com/problems/reorder-list)||[:memo:](https://leetcode.com/articles/reorder-list/)|Medium|
 |144|[binary-tree-preorder-traversal](https://leetcode.com/problems/binary-tree-preorder-traversal)||[:memo:](https://leetcode.com/articles/binary-tree-preorder-transversal/)|Medium|
 |145|[binary-tree-postorder-traversal](https://leetcode.com/problems/binary-tree-postorder-traversal)||[:memo:](https://leetcode.com/articles/binary-tree-postorder-transversal/)|Hard|
-|146|[lru-cache](https://leetcode.com/problems/lru-cache)||[:memo:](https://leetcode.com/articles/lru-cache/)|Medium|
+|146|[lru-cache](https://leetcode.com/problems/lru-cache)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/146-lru-cache/lru-cache.py)|[:memo:](https://leetcode.com/articles/lru-cache/)|Medium|
 |147|[insertion-sort-list](https://leetcode.com/problems/insertion-sort-list)|||Medium|
 |148|[sort-list](https://leetcode.com/problems/sort-list)|||Medium|
 |149|[max-points-on-a-line](https://leetcode.com/problems/max-points-on-a-line)||[:memo:](https://leetcode.com/articles/max-points-on-a-line/)|Hard|
@@ -306,7 +306,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |311|[sparse-matrix-multiplication](https://leetcode.com/problems/sparse-matrix-multiplication)|:lock:||Medium|
 |312|[burst-balloons](https://leetcode.com/problems/burst-balloons)||[:memo:](https://leetcode.com/articles/burst-balloons/)|Hard|
 |313|[super-ugly-number](https://leetcode.com/problems/super-ugly-number)|||Medium|
-|314|[binary-tree-vertical-order-traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal)|:lock:||Medium|
+|314|[binary-tree-vertical-order-traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal)|:lock:|[:memo:](https://leetcode.com/articles/binary-tree-vertical-order-traversal/)|Medium|
 |315|[count-of-smaller-numbers-after-self](https://leetcode.com/problems/count-of-smaller-numbers-after-self)|||Hard|
 |316|[remove-duplicate-letters](https://leetcode.com/problems/remove-duplicate-letters)||[:memo:](https://leetcode.com/articles/remove-duplicate-letters/)|Hard|
 |317|[shortest-distance-from-all-buildings](https://leetcode.com/problems/shortest-distance-from-all-buildings)|:lock:||Hard|
