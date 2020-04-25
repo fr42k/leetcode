@@ -2,7 +2,7 @@
 //
 //
 // 	Only one letter can be changed at a time.
-// 	Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
+// 	Each transformed word must exist in the word list.
 //
 //
 // Note:
@@ -52,29 +52,34 @@ public:
     int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
         unordered_set<string> dict(wordList.begin(), wordList.end());
         if (!dict.count(endWord)) return 0;
-        int d = 1;
+        int dist = 0;
         queue<string> q;
         q.emplace(beginWord);
-        while (q.size()) {
-            ++d;
-            for (int t = q.size(); t > 0; --t) {
+        while (!q.empty()) {
+            int n = q.size();
+            dist++;
+            for (int i = 0; i < n; i++) {
                 auto p = q.front();
                 q.pop();
-                for (int i = 0; i < p.size(); ++i) {
-                    char c = p[i];
-                    for (int j = 0; j < 26; ++j) {
-                        if (j + 'a' == c) continue;
-                        p[i] = j + 'a';
-                        if (p == endWord) return d;
-                        if (dict.count(p)) {
-                            q.emplace(p);
-                            dict.erase(p);
-                        }
-                    }
-                    p[i] = c;
-                }
+                if (p == endWord) return dist;
+                dict.erase(p);
+                search(p, dict, q);
             }
         }
         return 0;
+    }
+    void search(string s, unordered_set<string>& dict, queue<string>& q) {
+        for (int i = 0; i < s.size(); i++) {
+            char c = s[i];
+            for (int j = 0; j < 26; j++) {
+                s[i] = 'a' + j;
+                if (s[i] == c) continue;
+                if (dict.count(s)) {
+                    dict.erase(s);
+                    q.emplace(s);
+                }
+            }
+            s[i] = c;
+        }
     }
 };

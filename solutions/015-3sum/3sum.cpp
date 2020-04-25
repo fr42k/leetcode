@@ -21,43 +21,54 @@
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
-        // sort(nums.begin(), nums.end());
-        // vector<vector<int>> ans;
-        // for (int i = 0; i + 2 < nums.size(); i++) {
-        //     if (i && nums[i] == nums[i - 1]) continue;
-        //     int j = i + 1, k = nums.size() - 1;
-        //     int t = -nums[i];
-        //     while (j < k) {
-        //         if (nums[j] + nums[k] == t) {
-        //             ans.emplace_back(vector<int>{nums[i], nums[j], nums[k]});
-        //             while (j + 1 < nums.size() && nums[j] == nums[j + 1]) j++;
-        //             while (k - 1 >= 0 && nums[k] == nums[k - 1]) k--;
-        //             j++;
-        //             k--;
-        //         } else if (nums[j] + nums[k] > t) {
-        //             k--;
-        //         } else {
-        //             j++;
-        //         }
-        //     }
-        // }
-        // return ans;
-        vector<vector<int>> ans;
-        unordered_set<int> global_used, local_used, sum;
-        for (int i = 0; i + 1 < nums.size(); i++) {
-            if (global_used.count(nums[i])) continue;
-            local_used.clear();
-            sum.clear();
-            for (int j = i + 1; j < nums.size(); j++) {
-                if (global_used.count(nums[j]) || local_used.count(nums[j])) continue;
-                if (sum.count(-nums[i]-nums[j])) {
-                    local_used.emplace(nums[j]);
-                    local_used.emplace(-nums[i]-nums[j]);
-                    ans.emplace_back(vector<int>{nums[i], -nums[i]-nums[j], nums[j]});
+        /*
+        unordered_map<int, int> mp;
+        set<vector<int>> st;
+        for (int n: nums) {
+            mp[n]++;
+        }
+        for (auto it_a = mp.begin(); it_a != mp.end(); it_a++) {
+            for (auto it_b = it_a; it_b != mp.end(); it_b++) {
+                int a = it_a->first;
+                int b = it_b->first;
+                int c = 0 - a - b;
+                if (mp.count(c)) {
+                    mp[a]--;
+                    mp[b]--;
+                    mp[c]--;
+                    if (mp[a] >= 0 && mp[b] >= 0 && mp[c] >= 0) {
+                        vector<int> v{a, b, c};
+                        sort(v.begin(), v.end());
+                        st.emplace(v);
+                    }
+                    mp[a]++;
+                    mp[b]++;
+                    mp[c]++;
                 }
-                sum.emplace(nums[j]);
             }
-            global_used.emplace(nums[i]);
+        }
+        return vector<vector<int>>(st.begin(), st.end());
+        */
+        int n = nums.size();
+        sort(nums.begin(), nums.end());
+        vector<vector<int>> ans;
+        for (int i = 0; i < n - 2; i++) {
+            if (i && nums[i] == nums[i - 1]) continue;
+            int l = i + 1, h = n - 1;
+            while (l < h) {
+                int sum = nums[i] + nums[l] + nums[h];
+                if (sum == 0) {
+                    ans.emplace_back(vector<int>{nums[i], nums[l], nums[h]});
+                    while (l < h && nums[l] == nums[l + 1]) l++;
+                    while (l < h && nums[h] == nums[h - 1]) h--;
+                    l++;
+                    h--;
+                } else if (sum < 0) {
+                    l++;
+                } else {
+                    h--;
+                }
+            }
         }
         return ans;
     }

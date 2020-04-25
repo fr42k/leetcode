@@ -1,5 +1,5 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-04-24 20:20:33  
+Update time:  2020-04-25 02:42:06  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
 I have solved **792   /   1301** problems  
 while there are **207** problems still locked.  
@@ -64,7 +64,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |52|[n-queens-ii](https://leetcode.com/problems/n-queens-ii)||[:memo:](https://leetcode.com/articles/n-queens-ii/)|Hard|
 |53|[maximum-subarray](https://leetcode.com/problems/maximum-subarray)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/053-maximum-subarray/maximum-subarray.py)|[:memo:](https://leetcode.com/articles/maximum-subarray/)|Easy|
 |54|[spiral-matrix](https://leetcode.com/problems/spiral-matrix)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/054-spiral-matrix/spiral-matrix.cpp)|[:memo:](https://leetcode.com/articles/spiral-matrix/)|Medium|
-|55|[jump-game](https://leetcode.com/problems/jump-game)||[:memo:](https://leetcode.com/articles/jump-game/)|Medium|
+|55|[jump-game](https://leetcode.com/problems/jump-game)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/055-jump-game/jump-game.cpp) [Python3](https://github.com/fr42k/leetcode/blob/master/solutions/055-jump-game/jump-game.py)|[:memo:](https://leetcode.com/articles/jump-game/)|Medium|
 |56|[merge-intervals](https://leetcode.com/problems/merge-intervals)||[:memo:](https://leetcode.com/articles/merge-intervals/)|Medium|
 |57|[insert-interval](https://leetcode.com/problems/insert-interval)||[:memo:](https://leetcode.com/articles/insert-interval/)|Hard|
 |58|[length-of-last-word](https://leetcode.com/problems/length-of-last-word)||[:memo:](https://leetcode.com/articles/length-of-last-word/)|Easy|
@@ -135,8 +135,8 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |123|[best-time-to-buy-and-sell-stock-iii](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii)||[:memo:](https://leetcode.com/articles/best-time-to-buy-and-sell-stock-iii/)|Hard|
 |124|[binary-tree-maximum-path-sum](https://leetcode.com/problems/binary-tree-maximum-path-sum)||[:memo:](https://leetcode.com/articles/binary-tree-maximum-path-sum/)|Hard|
 |125|[valid-palindrome](https://leetcode.com/problems/valid-palindrome)||[:memo:](https://leetcode.com/articles/valid-palindrome/)|Easy|
-|126|[word-ladder-ii](https://leetcode.com/problems/word-ladder-ii)|||Hard|
-|127|[word-ladder](https://leetcode.com/problems/word-ladder)||[:memo:](https://leetcode.com/articles/word-ladder/)|Medium|
+|126|[word-ladder-ii](https://leetcode.com/problems/word-ladder-ii)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/126-word-ladder-ii/word-ladder-ii.cpp)||Hard|
+|127|[word-ladder](https://leetcode.com/problems/word-ladder)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/127-word-ladder/word-ladder.cpp)|[:memo:](https://leetcode.com/articles/word-ladder/)|Medium|
 |128|[longest-consecutive-sequence](https://leetcode.com/problems/longest-consecutive-sequence)||[:memo:](https://leetcode.com/articles/longest-consecutive-sequence/)|Hard|
 |129|[sum-root-to-leaf-numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers)||[:memo:](https://leetcode.com/articles/sum-root-to-leaf-numbers/)|Medium|
 |130|[surrounded-regions](https://leetcode.com/problems/surrounded-regions)||[:memo:](https://leetcode.com/articles/surrounded-regions/)|Medium|
