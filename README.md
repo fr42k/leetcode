@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-04-25 15:25:26  
+Update time:  2020-04-25 21:33:08  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **792   /   1301** problems  
+I have solved **4   /   1305** problems  
 while there are **207** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
@@ -1158,6 +1158,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1282|[number-of-valid-words-for-each-puzzle](https://leetcode.com/problems/number-of-valid-words-for-each-puzzle)|||Hard|
 |1284|[four-divisors](https://leetcode.com/problems/four-divisors)|||Medium|
 |1285|[balance-a-binary-search-tree](https://leetcode.com/problems/balance-a-binary-search-tree)|||Medium|
+|1286|[constrained-subset-sum](https://leetcode.com/problems/constrained-subset-sum)|||Hard|
 |1287|[distance-between-bus-stops](https://leetcode.com/problems/distance-between-bus-stops)|||Easy|
 |1288|[maximum-subarray-sum-with-one-deletion](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion)|||Medium|
 |1289|[day-of-the-week](https://leetcode.com/problems/day-of-the-week)|||Easy|
@@ -1311,3 +1312,6 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1533|[display-table-of-food-orders-in-a-restaurant](https://leetcode.com/problems/display-table-of-food-orders-in-a-restaurant)|||Medium|
 |1534|[minimum-number-of-frogs-croaking](https://leetcode.com/problems/minimum-number-of-frogs-croaking)|||Medium|
 |1535|[build-array-where-you-can-find-the-maximum-exactly-k-comparisons](https://leetcode.com/problems/build-array-where-you-can-find-the-maximum-exactly-k-comparisons)|||Hard|
+|1537|[maximum-score-after-splitting-a-string](https://leetcode.com/problems/maximum-score-after-splitting-a-string)|||Easy|
+|1538|[maximum-points-you-can-obtain-from-cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards)|||Medium|
+|1539|[diagonal-traverse-ii](https://leetcode.com/problems/diagonal-traverse-ii)|||Medium|
