@@ -1,5 +1,5 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-04-29 11:22:21  
+Update time:  2020-04-29 17:30:13  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
 I have solved **7   /   1305** problems  
 while there are **207** problems still locked.  
@@ -1158,7 +1158,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1282|[number-of-valid-words-for-each-puzzle](https://leetcode.com/problems/number-of-valid-words-for-each-puzzle)|||Hard|
 |1284|[four-divisors](https://leetcode.com/problems/four-divisors)|||Medium|
 |1285|[balance-a-binary-search-tree](https://leetcode.com/problems/balance-a-binary-search-tree)|||Medium|
-|1286|[constrained-subset-sum](https://leetcode.com/problems/constrained-subset-sum)|||Hard|
+|1286|[constrained-subsequence-sum](https://leetcode.com/problems/constrained-subsequence-sum)|||Hard|
 |1287|[distance-between-bus-stops](https://leetcode.com/problems/distance-between-bus-stops)|||Easy|
 |1288|[maximum-subarray-sum-with-one-deletion](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion)|||Medium|
 |1289|[day-of-the-week](https://leetcode.com/problems/day-of-the-week)|||Easy|
