@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-05-02 06:49:06  
+Update time:  2020-05-02 12:56:55  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **9   /   1310** problems  
+I have solved **9   /   1314** problems  
 while there are **212** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
@@ -1313,6 +1313,10 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1525|[queries-on-a-permutation-with-key](https://leetcode.com/problems/queries-on-a-permutation-with-key)|||Medium|
 |1526|[html-entity-parser](https://leetcode.com/problems/html-entity-parser)|||Medium|
 |1527|[number-of-ways-to-paint-n-3-grid](https://leetcode.com/problems/number-of-ways-to-paint-n-3-grid)|||Hard|
+|1528|[kids-with-the-greatest-number-of-candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies)|||Easy|
+|1529|[max-difference-you-can-get-from-changing-an-integer](https://leetcode.com/problems/max-difference-you-can-get-from-changing-an-integer)|||Medium|
+|1530|[check-if-a-string-can-break-another-string](https://leetcode.com/problems/check-if-a-string-can-break-another-string)|||Medium|
+|1531|[number-of-ways-to-wear-different-hats-to-each-other](https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other)|||Hard|
 |1532|[reformat-the-string](https://leetcode.com/problems/reformat-the-string)|||Easy|
 |1533|[display-table-of-food-orders-in-a-restaurant](https://leetcode.com/problems/display-table-of-food-orders-in-a-restaurant)|||Medium|
 |1534|[minimum-number-of-frogs-croaking](https://leetcode.com/problems/minimum-number-of-frogs-croaking)|||Medium|
