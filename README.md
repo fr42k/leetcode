@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-05-05 14:32:06  
+Update time:  2020-05-05 20:39:58  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **10   /   1318** problems  
+I have solved **11   /   1318** problems  
 while there are **212** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
@@ -379,7 +379,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |384|[shuffle-an-array](https://leetcode.com/problems/shuffle-an-array)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/384-shuffle-an-array/shuffle-an-array.cpp)|[:memo:](https://leetcode.com/articles/shuffle-an-array/)|Medium|
 |385|[mini-parser](https://leetcode.com/problems/mini-parser)|||Medium|
 |386|[lexicographical-numbers](https://leetcode.com/problems/lexicographical-numbers)|||Medium|
-|387|[first-unique-character-in-a-string](https://leetcode.com/problems/first-unique-character-in-a-string)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/387-first-unique-character-in-a-string/first-unique-character-in-a-string.cpp)|[:memo:](https://leetcode.com/articles/first-unique-character-in-a-string/)|Easy|
+|387|[first-unique-character-in-a-string](https://leetcode.com/problems/first-unique-character-in-a-string)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/387-first-unique-character-in-a-string/first-unique-character-in-a-string.py) [Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/387-first-unique-character-in-a-string/first-unique-character-in-a-string.cpp)|[:memo:](https://leetcode.com/articles/first-unique-character-in-a-string/)|Easy|
 |388|[longest-absolute-file-path](https://leetcode.com/problems/longest-absolute-file-path)|||Medium|
 |389|[find-the-difference](https://leetcode.com/problems/find-the-difference)||[:memo:](https://leetcode.com/articles/find-the-difference/)|Easy|
 |390|[elimination-game](https://leetcode.com/problems/elimination-game)|||Medium|
