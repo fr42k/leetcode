@@ -19,16 +19,5 @@
 
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        frequencies = dict()
-        # Construct and initialize the number frequency dictionary
-        for n in nums:
-            frequencies[n] = 0
-        # Count frequencies for each number
-        for n in nums:
-            frequencies[n] += 1
-        max_freq = max(frequencies.values())
-        for num in frequencies:
-            if (frequencies[num] == max_freq):
-                return num
-        return -1
-        
+        x = sorted(nums)
+        return x[len(x)//2]

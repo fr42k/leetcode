@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-05-05 20:39:58  
+Update time:  2020-05-06 02:47:26  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **11   /   1318** problems  
+I have solved **12   /   1318** problems  
 while there are **212** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
@@ -178,7 +178,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |166|[fraction-to-recurring-decimal](https://leetcode.com/problems/fraction-to-recurring-decimal)||[:memo:](https://leetcode.com/articles/fraction-to-recurring-decimal/)|Medium|
 |167|[two-sum-ii-input-array-is-sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted)||[:memo:](https://leetcode.com/articles/two-sum-ii-input-array-is-sorted/)|Easy|
 |168|[excel-sheet-column-title](https://leetcode.com/problems/excel-sheet-column-title)|||Easy|
-|169|[majority-element](https://leetcode.com/problems/majority-element)||[:memo:](https://leetcode.com/articles/majority-element/)|Easy|
+|169|[majority-element](https://leetcode.com/problems/majority-element)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/169-majority-element/majority-element.py)|[:memo:](https://leetcode.com/articles/majority-element/)|Easy|
 |170|[two-sum-iii-data-structure-design](https://leetcode.com/problems/two-sum-iii-data-structure-design)|:lock:|[:memo:](https://leetcode.com/articles/two-sum-iii-data-structure-design/)|Easy|
 |171|[excel-sheet-column-number](https://leetcode.com/problems/excel-sheet-column-number)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/171-excel-sheet-column-number/excel-sheet-column-number.cpp)||Easy|
 |172|[factorial-trailing-zeroes](https://leetcode.com/problems/factorial-trailing-zeroes)||[:memo:](https://leetcode.com/articles/factorial-trailing-zeroes/)|Easy|
