@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-05-07 21:40:16  
+Update time:  2020-05-08 03:47:52  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **13   /   1318** problems  
+I have solved **14   /   1318** problems  
 while there are **212** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
@@ -1186,7 +1186,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1343|[dice-roll-simulation](https://leetcode.com/problems/dice-roll-simulation)|||Medium|
 |1344|[maximum-equal-frequency](https://leetcode.com/problems/maximum-equal-frequency)|||Hard|
 |1345|[perform-string-shifts](https://leetcode.com/problems/perform-string-shifts)|:lock:|[:memo:](https://leetcode.com/articles/performing-string-shifts/)|Easy|
-|1349|[check-if-it-is-a-straight-line](https://leetcode.com/problems/check-if-it-is-a-straight-line)|||Easy|
+|1349|[check-if-it-is-a-straight-line](https://leetcode.com/problems/check-if-it-is-a-straight-line)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/1349-check-if-it-is-a-straight-line/check-if-it-is-a-straight-line.py)||Easy|
 |1350|[remove-sub-folders-from-the-filesystem](https://leetcode.com/problems/remove-sub-folders-from-the-filesystem)|||Medium|
 |1351|[replace-the-substring-for-balanced-string](https://leetcode.com/problems/replace-the-substring-for-balanced-string)|||Medium|
 |1352|[maximum-profit-in-job-scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling)|||Hard|
