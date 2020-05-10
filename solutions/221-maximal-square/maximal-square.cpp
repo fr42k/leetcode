@@ -18,23 +18,25 @@ class Solution {
 public:
     int maximalSquare(vector<vector<char>>& matrix) {
         int m = matrix.size();
-        if (!m) return m;
+        if (!m) return 0;
         int n = matrix[0].size();
-        vector<int> dp(n + 1, 0);
-        int lefttop = 0;
-        int maxsize = 0;
+        vector<int> dp(n, 0);
+        int len = 0;
         for (int i = 0; i < m; i++) {
-            for (int j = 1; j <= n; j++) {
-                int tmp = dp[j];
-                if (matrix[i][j - 1] == '1') {
-                    dp[j] = min(dp[j - 1], min(lefttop, dp[j])) + 1;
-                    maxsize = max(maxsize, dp[j]);
+            int prev = dp[0];
+            dp[0] = matrix[i][0] == '1';
+            len = max(len, dp[0]);
+            for (int j = 1; j < n; j++) {
+                int top = dp[j];
+                if (matrix[i][j] == '1') {
+                    dp[j] = 1 + min(dp[j - 1], min(top, prev));
+                    len = max(len, dp[j]);
                 } else {
                     dp[j] = 0;
                 }
-                lefttop = tmp;
+                prev = top;
             }
         }
-        return maxsize * maxsize;
+        return len * len;
     }
 };

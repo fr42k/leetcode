@@ -94,21 +94,21 @@ public:
      */
     int read(char *buf, int n) {
         int cnt = 0;
-        while (n > 0 && !q.empty()) {
-            buf[cnt++] = q.front();
-            q.pop();
+        while (!cache.empty() && n > 0) {
+            buf[cnt++] = cache.front();
+            cache.pop();
             n--;
         }
         int len = 4;
         while (n > 0 && len == 4) {
             len = read4(buf + cnt);
             for (int i = n; i < len; i++) {
-                q.emplace(buf[cnt + i]);
+                cache.emplace(buf[cnt + i]);
             }
-            cnt += min(len, n);
+            cnt += min(n, len);
             n -= len;
         }
         return cnt;
     }
-    queue<char> q;
+    queue<char> cache;
 };
