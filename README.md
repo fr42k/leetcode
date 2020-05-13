@@ -1,5 +1,5 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-05-13 06:34:13  
+Update time:  2020-05-13 12:42:35  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
 I have solved **19   /   1322** problems  
 while there are **212** problems still locked.  
@@ -25,7 +25,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |13|[roman-to-integer](https://leetcode.com/problems/roman-to-integer)||[:memo:](https://leetcode.com/articles/roman-to-integer/)|Easy|
 |14|[longest-common-prefix](https://leetcode.com/problems/longest-common-prefix)||[:memo:](https://leetcode.com/articles/longest-common-prefix/)|Easy|
 |15|[3sum](https://leetcode.com/problems/3sum)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/015-3sum/3sum.cpp)|[:memo:](https://leetcode.com/articles/3sum/)|Medium|
-|16|[3sum-closest](https://leetcode.com/problems/3sum-closest)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/016-3sum-closest/3sum-closest.cpp)||Medium|
+|16|[3sum-closest](https://leetcode.com/problems/3sum-closest)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/016-3sum-closest/3sum-closest.cpp)|[:memo:](https://leetcode.com/articles/3sum-closest/)|Medium|
 |17|[letter-combinations-of-a-phone-number](https://leetcode.com/problems/letter-combinations-of-a-phone-number)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/017-letter-combinations-of-a-phone-number/letter-combinations-of-a-phone-number.cpp)|[:memo:](https://leetcode.com/articles/letter-combinations-of-a-phone-number/)|Medium|
 |18|[4sum](https://leetcode.com/problems/4sum)|||Medium|
 |19|[remove-nth-node-from-end-of-list](https://leetcode.com/problems/remove-nth-node-from-end-of-list)||[:memo:](https://leetcode.com/articles/remove-nth-node-from-end-of-list/)|Medium|
