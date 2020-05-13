@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-05-12 18:18:09  
+Update time:  2020-05-13 00:25:53  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **17   /   1322** problems  
+I have solved **19   /   1322** problems  
 while there are **212** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
@@ -517,7 +517,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |537|[complex-number-multiplication](https://leetcode.com/problems/complex-number-multiplication)||[:memo:](https://leetcode.com/articles/complex-number-multiplication/)|Medium|
 |538|[convert-bst-to-greater-tree](https://leetcode.com/problems/convert-bst-to-greater-tree)||[:memo:](https://leetcode.com/articles/convert-bst-to-greater-tree/)|Easy|
 |539|[minimum-time-difference](https://leetcode.com/problems/minimum-time-difference)|||Medium|
-|540|[single-element-in-a-sorted-array](https://leetcode.com/problems/single-element-in-a-sorted-array)||[:memo:](https://leetcode.com/articles/single-element-in-a-sorted-array/)|Medium|
+|540|[single-element-in-a-sorted-array](https://leetcode.com/problems/single-element-in-a-sorted-array)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/540-single-element-in-a-sorted-array/single-element-in-a-sorted-array.py)|[:memo:](https://leetcode.com/articles/single-element-in-a-sorted-array/)|Medium|
 |541|[reverse-string-ii](https://leetcode.com/problems/reverse-string-ii)||[:memo:](https://leetcode.com/articles/reverse-string-ii/)|Easy|
 |542|[01-matrix](https://leetcode.com/problems/01-matrix)||[:memo:](https://leetcode.com/articles/01-matrix/)|Medium|
 |543|[diameter-of-binary-tree](https://leetcode.com/problems/diameter-of-binary-tree)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/543-diameter-of-binary-tree/diameter-of-binary-tree.py)|[:memo:](https://leetcode.com/articles/diameter-of-binary-tree/)|Easy|
@@ -954,7 +954,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1033|[broken-calculator](https://leetcode.com/problems/broken-calculator)||[:memo:](https://leetcode.com/articles/broken-calculator/)|Medium|
 |1034|[subarrays-with-k-different-integers](https://leetcode.com/problems/subarrays-with-k-different-integers)||[:memo:](https://leetcode.com/articles/subarrays-with-k-different-integers/)|Hard|
 |1035|[cousins-in-binary-tree](https://leetcode.com/problems/cousins-in-binary-tree)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/1035-cousins-in-binary-tree/cousins-in-binary-tree.py)|[:memo:](https://leetcode.com/articles/cousins-in-binary-tree/)|Easy|
-|1036|[rotting-oranges](https://leetcode.com/problems/rotting-oranges)||[:memo:](https://leetcode.com/articles/rotting-oranges/)|Medium|
+|1036|[rotting-oranges](https://leetcode.com/problems/rotting-oranges)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/1036-rotting-oranges/rotting-oranges.py)|[:memo:](https://leetcode.com/articles/rotting-oranges/)|Medium|
 |1037|[minimum-number-of-k-consecutive-bit-flips](https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips)||[:memo:](https://leetcode.com/articles/minimum-number-of-k-consecutive-bit-flips/)|Hard|
 |1038|[number-of-squareful-arrays](https://leetcode.com/problems/number-of-squareful-arrays)||[:memo:](https://leetcode.com/articles/number-of-squareful-arrays/)|Hard|
 |1039|[find-the-town-judge](https://leetcode.com/problems/find-the-town-judge)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/1039-find-the-town-judge/find-the-town-judge.py)|[:memo:](https://leetcode.com/articles/find-the-town-judge/)|Easy|
