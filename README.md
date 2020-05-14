@@ -1,5 +1,5 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-05-14 00:59:02  
+Update time:  2020-05-14 07:07:23  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
 I have solved **20   /   1322** problems  
 while there are **212** problems still locked.  
@@ -644,7 +644,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |711|[number-of-distinct-islands-ii](https://leetcode.com/problems/number-of-distinct-islands-ii)|:lock:|[:memo:](https://leetcode.com/articles/number-of-distinct-islands-ii/)|Hard|
 |712|[minimum-ascii-delete-sum-for-two-strings](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings)||[:memo:](https://leetcode.com/articles/minimum-ascii-delete-sum-for-two-strings/)|Medium|
 |713|[subarray-product-less-than-k](https://leetcode.com/problems/subarray-product-less-than-k)||[:memo:](https://leetcode.com/articles/subarray-product-less-than-k/)|Medium|
-|714|[best-time-to-buy-and-sell-stock-with-transaction-fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee)||[:memo:](https://leetcode.com/articles/best-time-to-buy-and-sell-stock-with-transaction-fee/)|Medium|
+|714|[best-time-to-buy-and-sell-stock-with-transaction-fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee)||[:memo:](https://leetcode.com/articles/best-time-to-buy-and-sell-stock-with-transaction-f/)|Medium|
 |715|[range-module](https://leetcode.com/problems/range-module)||[:memo:](https://leetcode.com/articles/range-module/)|Hard|
 |716|[max-stack](https://leetcode.com/problems/max-stack)|:lock:|[:memo:](https://leetcode.com/articles/max-stack/)|Easy|
 |717|[1-bit-and-2-bit-characters](https://leetcode.com/problems/1-bit-and-2-bit-characters)||[:memo:](https://leetcode.com/articles/1-bit-and-2-bit-characters/)|Easy|
