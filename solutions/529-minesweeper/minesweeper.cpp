@@ -84,10 +84,10 @@ public:
         }
         int lenx = board.size();
         int leny = board[0].size();
-        queue<vector<int>> q{};
+        stack<vector<int>> q{};
         q.emplace(click);
         while (!q.empty()) {
-            auto p = q.front();
+            auto p = q.top();
             q.pop();
             x = p[0];
             y = p[1];
@@ -106,7 +106,6 @@ public:
                     for (int j = max(0, y - 1); j <= min(y + 1, leny - 1); j++) {
                         if (board[i][j] == 'E') {
                             q.emplace(vector<int>{i,j});
-                            board[i][j] = 'B';
                         }
                     }
                 }
