@@ -68,28 +68,30 @@ public:
             uf[idx] = idx;
             cnt++;
             for (int k = 0; k < 4; k++) {
-                int n_x = x + dir[k], n_y = y + dir[k + 1];
-                int n_idx = n_x * n + n_y;
-                if (valid(n_x, n_y, m, n) && uf[n_idx] != -1) {
-                    int pa = ufind(uf, idx), pb = ufind(uf, n_idx);
-                    if (pa != pb) {
-                        cnt--;
-                        uf[pa] = min(pa, pb);
-                        uf[pb] = uf[pa];
-                    }
+                int xp = x + dir[k], yp = y + dir[k + 1];
+                int idxp = xp * n + yp;
+                if (valid(xp, yp, m, n) && uf[idxp] != -1) {
+                    int p1 = ufind(uf, idx), p2 = ufind(uf, idxp);
+                    if (p1 == p2) continue;
+                    make_union(uf, p1, p2);
+                    cnt--;
                 }
             }
             ans.emplace_back(cnt);
         }
         return ans;
     }
-    inline bool valid(int x, int y, int m, int n) {
+    bool valid(int x, int y, int m, int n) {
         return (0 <= x && x < m && 0 <= y && y < n);
     }
     int ufind(vector<int>& uf, int k) {
-        if (k != uf[k]) {
+        if (uf[k] != k) {
             uf[k] = ufind(uf, uf[k]);
         }
         return uf[k];
+    }
+    void make_union(vector<int>& uf, int p1, int p2) {
+        uf[p1] = min(p1, p2);
+        uf[p2] = uf[p1];
     }
 };

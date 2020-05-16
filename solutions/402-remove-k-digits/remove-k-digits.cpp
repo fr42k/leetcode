@@ -38,22 +38,25 @@ class Solution {
 public:
     string removeKdigits(string num, int k) {
         if (k >= num.size()) return "0";
+        vector<char> buf;
         int len = num.size() - k;
-        vector<char> stack;
-        stack.emplace_back(num[0]);
+        buf.emplace_back(num[0]);
         for (int i = 1; i < num.size(); i++) {
-            while (!stack.empty() && stack.back() > num[i] && k > 0) {
-                stack.pop_back();
+            while (k > 0 && !buf.empty() && buf.back() > num[i]) {
                 k--;
+                buf.pop_back();
             }
-            stack.emplace_back(num[i]);
+            buf.emplace_back(num[i]);
         }
-        vector<char> candi(stack.begin(), stack.begin() + len);
+        buf.resize(len);
         int j = 0;
-        while (j < candi.size() && candi[j] == '0') {
+        while (j < buf.size() && buf[j] == '0') {
             j++;
         }
-        string ans(candi.begin() + j, candi.end());
+        string ans;
+        for (; j < buf.size(); j++) {
+            ans += buf[j];
+        }
         return ans.empty()? "0": ans;
     }
 };
