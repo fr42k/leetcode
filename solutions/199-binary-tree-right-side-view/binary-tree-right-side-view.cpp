@@ -27,18 +27,20 @@
 class Solution {
 public:
     vector<int> rightSideView(TreeNode* root) {
-        vector<int> ans;
-        preorder(root, ans, 0);
+        vector<int> ans{};
+        visit(root, &ans, 0);
         return ans;
     }
-    void preorder(TreeNode* root, vector<int>& ans, int d) {
-        if (!root) return;
-        if (d == ans.size()) {
-            ans.emplace_back(root->val);
-        } else {
-            ans[d] = root->val;
+    void visit(TreeNode* root, vector<int>* ans, int d) {
+        if (root == nullptr) {
+            return;
         }
-        preorder(root->left, ans, d + 1);
-        preorder(root->right, ans, d + 1);
+        if (d == ans->size()) {
+            ans->emplace_back(root->val);
+        } else {
+            ans->at(d) = root->val;
+        }
+        visit(root->left, ans, d+1);
+        visit(root->right, ans, d+1);
     }
 };

@@ -19,26 +19,26 @@
 class Solution {
 public:
     string minWindow(string s, string t) {
-        int minlen = INT_MAX, start = -1;
-        vector<int> cnt(256);
+        int minlen = INT_MAX, head = 0;
+        vector<int> dict(256, 0);
         for (char c: t) {
-            cnt[c]++;
+            dict[c]++;
         }
-        for (int slow = 0, fast = 0, diff = 0; fast < s.size(); fast++) {
-            if (cnt[s[fast]]-- > 0) {
-                diff++;
+        for (int slow = 0, fast = 0, cnt = 0; fast < s.size(); fast++) {
+            if (dict[s[fast]]-- > 0) {
+                cnt++;
             }
-            while (diff >= t.size()) {
+            while (cnt == t.size()) {
                 int len = fast - slow + 1;
                 if (len < minlen) {
+                    head = slow;
                     minlen = len;
-                    start = slow;
                 }
-                if (++cnt[s[slow++]] > 0) {
-                    diff--;
+                if (++dict[s[slow++]] > 0) {
+                    cnt--;
                 }
             }
         }
-        return start == -1? "": s.substr(start, minlen);
+        return minlen == INT_MAX? "": s.substr(head, minlen);
     }
 };
