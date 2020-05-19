@@ -31,20 +31,17 @@
 class Solution {
 public:
     vector<string> binaryTreePaths(TreeNode* root) {
-        if (!root) return {};
         vector<string> ans;
-        path(root, "", ans);
+        addpath(root, "", ans);
         return ans;
     }
-    void path(TreeNode* root, string s, vector<string>& ans) {
+    void addpath(TreeNode* root, string path, vector<string>& ans) {
         if (!root) return;
-        s += to_string(root->val);
+        path += to_string(root->val);
         if (!root->left && !root->right) {
-            ans.emplace_back(s);
-            return;
+            ans.emplace_back(path);
         }
-        s += "->";
-        path(root->left, s, ans);
-        path(root->right, s, ans);
+        addpath(root->left, path + "->", ans);
+        addpath(root->right, path + "->", ans);
     }
 };

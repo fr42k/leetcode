@@ -1,5 +1,5 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-05-18 17:39:07  
+Update time:  2020-05-19 00:00:37  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
 I have solved **792   /   1330** problems  
 while there are **212** problems still locked.  
@@ -116,7 +116,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |104|[maximum-depth-of-binary-tree](https://leetcode.com/problems/maximum-depth-of-binary-tree)||[:memo:](https://leetcode.com/articles/maximum-depth-of-binary-tree/)|Easy|
 |105|[construct-binary-tree-from-preorder-and-inorder-traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal)||[:memo:](https://leetcode.com/articles/construct-binary-tree-from-preorder-and-inorder-tr/)|Medium|
 |106|[construct-binary-tree-from-inorder-and-postorder-traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal)||[:memo:](https://leetcode.com/articles/construct-binary-tree-from-inorder-and-postorder-t/)|Medium|
-|107|[binary-tree-level-order-traversal-ii](https://leetcode.com/problems/binary-tree-level-order-traversal-ii)|||Easy|
+|107|[binary-tree-level-order-traversal-ii](https://leetcode.com/problems/binary-tree-level-order-traversal-ii)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/107-binary-tree-level-order-traversal-ii/binary-tree-level-order-traversal-ii.cpp)||Easy|
 |108|[convert-sorted-array-to-binary-search-tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree)||[:memo:](https://leetcode.com/articles/convert-sorted-array-to-bst/)|Easy|
 |109|[convert-sorted-list-to-binary-search-tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree)||[:memo:](https://leetcode.com/articles/convert-sorted-list-to-binary-search-tree/)|Medium|
 |110|[balanced-binary-tree](https://leetcode.com/problems/balanced-binary-tree)||[:memo:](https://leetcode.com/articles/balanced-binary-tree/)|Easy|
@@ -250,7 +250,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |254|[factor-combinations](https://leetcode.com/problems/factor-combinations)|:lock:||Medium|
 |255|[verify-preorder-sequence-in-binary-search-tree](https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree)|:lock:||Medium|
 |256|[paint-house](https://leetcode.com/problems/paint-house)|:lock:|[:memo:](https://leetcode.com/articles/paint-house/)|Easy|
-|257|[binary-tree-paths](https://leetcode.com/problems/binary-tree-paths)||[:memo:](https://leetcode.com/articles/binary-tree-paths/)|Easy|
+|257|[binary-tree-paths](https://leetcode.com/problems/binary-tree-paths)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/257-binary-tree-paths/binary-tree-paths.cpp)|[:memo:](https://leetcode.com/articles/binary-tree-paths/)|Easy|
 |258|[add-digits](https://leetcode.com/problems/add-digits)|||Easy|
 |259|[3sum-smaller](https://leetcode.com/problems/3sum-smaller)|:lock:|[:memo:](https://leetcode.com/articles/3sum-smaller/)|Medium|
 |260|[single-number-iii](https://leetcode.com/problems/single-number-iii)||[:memo:](https://leetcode.com/articles/single-number-iii/)|Medium|
@@ -541,7 +541,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |564|[find-the-closest-palindrome](https://leetcode.com/problems/find-the-closest-palindrome)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/564-find-the-closest-palindrome/find-the-closest-palindrome.cpp)|[:memo:](https://leetcode.com/articles/find-the-closest-palindrome/)|Hard|
 |565|[array-nesting](https://leetcode.com/problems/array-nesting)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/565-array-nesting/array-nesting.cpp)|[:memo:](https://leetcode.com/articles/array-nesting/)|Medium|
 |566|[reshape-the-matrix](https://leetcode.com/problems/reshape-the-matrix)||[:memo:](https://leetcode.com/articles/reshape-the-matrix/)|Easy|
-|567|[permutation-in-string](https://leetcode.com/problems/permutation-in-string)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/567-permutation-in-string/permutation-in-string.cpp)|[:memo:](https://leetcode.com/articles/short-permutation-in-a-long-string/)|Medium|
+|567|[permutation-in-string](https://leetcode.com/problems/permutation-in-string)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/567-permutation-in-string/permutation-in-string.py) [Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/567-permutation-in-string/permutation-in-string.cpp)|[:memo:](https://leetcode.com/articles/short-permutation-in-a-long-string/)|Medium|
 |568|[maximum-vacation-days](https://leetcode.com/problems/maximum-vacation-days)|:lock:|[:memo:](https://leetcode.com/articles/maximum-vacation-days/)|Hard|
 |572|[subtree-of-another-tree](https://leetcode.com/problems/subtree-of-another-tree)||[:memo:](https://leetcode.com/articles/subtree-of-another-tree/)|Easy|
 |573|[squirrel-simulation](https://leetcode.com/problems/squirrel-simulation)|:lock:|[:memo:](https://leetcode.com/articles/squirrel-simulation/)|Medium|
@@ -759,7 +759,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |826|[soup-servings](https://leetcode.com/problems/soup-servings)||[:memo:](https://leetcode.com/articles/soup-servings/)|Medium|
 |827|[expressive-words](https://leetcode.com/problems/expressive-words)||[:memo:](https://leetcode.com/articles/expressive-words/)|Medium|
 |828|[chalkboard-xor-game](https://leetcode.com/problems/chalkboard-xor-game)||[:memo:](https://leetcode.com/articles/chalkboard-xor-game/)|Hard|
-|829|[subdomain-visit-count](https://leetcode.com/problems/subdomain-visit-count)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/829-subdomain-visit-count/subdomain-visit-count.py)|[:memo:](https://leetcode.com/articles/subdomain-visit-count/)|Easy|
+|829|[subdomain-visit-count](https://leetcode.com/problems/subdomain-visit-count)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/829-subdomain-visit-count/subdomain-visit-count.cpp) [Python3](https://github.com/fr42k/leetcode/blob/master/solutions/829-subdomain-visit-count/subdomain-visit-count.py)|[:memo:](https://leetcode.com/articles/subdomain-visit-count/)|Easy|
 |830|[largest-triangle-area](https://leetcode.com/problems/largest-triangle-area)||[:memo:](https://leetcode.com/articles/largest-triangle-area/)|Easy|
 |831|[largest-sum-of-averages](https://leetcode.com/problems/largest-sum-of-averages)||[:memo:](https://leetcode.com/articles/largest-sum-of-averages/)|Medium|
 |832|[binary-tree-pruning](https://leetcode.com/problems/binary-tree-pruning)||[:memo:](https://leetcode.com/articles/binary-tree-pruning/)|Medium|
