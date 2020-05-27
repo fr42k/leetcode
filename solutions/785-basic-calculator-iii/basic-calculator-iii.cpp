@@ -24,53 +24,67 @@
 class Solution {
 public:
     int calculate(string s) {
+        auto start = s.find_first_not_of(" ");
+        if (start == string::npos) return 0;
+        s = s.substr(start);
         if (s[0] == '-') s.insert(s.begin(), '0');
+        while (s.find(" ") != string::npos) {
+            auto p = s.find(" ");
+            s.erase(p, 1);
+        }
         while (s.find("(-") != string::npos) {
             auto p = s.find("(-");
             s.insert(s.begin() + p + 1, '0');
         }
+        stack<double> nums;
         stack<char> sym;
-        stack<long> nums;
-        for (int i = s.size() - 1; i >= 0; i--) {
+        int n = s.size();
+        for (int i = n - 1; i >= 0; i--) {
             if (s[i] == ' ') continue;
             if (isdigit(s[i])) {
-                int j = i;
-                while (i >= 0 && isdigit(s[i])) i--;
+                int len = 0;
+                while (i >= 0 && isdigit(s[i])) {
+                    len++;
+                    i--;
+                }
                 i++;
-                nums.emplace(stol(s.substr(i, j - i + 1)));
+                nums.emplace(stol(s.substr(i, len)));
             } else if (s[i] == ')' || s[i] == '*' || s[i] == '/') {
                 sym.emplace(s[i]);
             } else if (s[i] == '+' || s[i] == '-') {
                 while (!sym.empty() && (sym.top() == '*' || sym.top() == '/')) {
-                    cal(nums, sym);
+                    calc(nums, sym);
                 }
                 sym.emplace(s[i]);
             } else if (s[i] == '(') {
                 while (!sym.empty() && sym.top() != ')') {
-                    cal(nums, sym);
+                    calc(nums, sym);
                 }
                 sym.pop();
             }
         }
         while (!sym.empty()) {
-            cal(nums, sym);
+            calc(nums, sym);
         }
         return nums.empty()? 0: nums.top();
     }
-    void cal(stack<long>& nums, stack<char>& sym) {
-        char opr = sym.top();
-        sym.pop();
-        long a = nums.top();
+    void calc(stack<double>& nums, stack<char>& sym) {
+        double left = nums.top();
         nums.pop();
-        long& b = nums.top();
-        if (opr == '+') {
-            b += a;
-        } else if (opr == '-') {
-            b = a - b;
-        } else if (opr == '*') {
-            b *= a;
-        } else if (opr == '/') {
-            b = a / b;
+        double right = nums.top();
+        nums.pop();
+        char s = sym.top();
+        sym.pop();
+        double n = 0;
+        if (s == '+') {
+            n = left + right;
+        } else if (s == '-') {
+            n = left - right;
+        } else if (s == '*') {
+            n = left * right;
+        } else if (s == '/') {
+            n = floor(left / right);
         }
+        nums.emplace(n);
     }
 };

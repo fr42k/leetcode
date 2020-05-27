@@ -51,42 +51,41 @@
 class Solution {
 public:
     vector<vector<string>> findLadders(string beginWord, string endWord, vector<string>& wordList) {
-        unordered_set<string> dict(wordList.begin(), wordList.end());
-        if (!dict.count(endWord)) return {};
+        unordered_set<string> dict(wordList.begin(), wordList.end()), visited;
         vector<vector<string>> ans;
         queue<vector<string>> q;
-        unordered_set<string> to_del;
         q.emplace(vector<string>{beginWord});
-        bool found = false;
-        while (!q.empty() && !found) {
-            int n = q.size();
-            for (auto x: to_del) {
-                dict.erase(x);
+        while (!q.empty()) {
+            bool found = false;
+            for (auto w: visited) {
+                dict.erase(w);
             }
-            to_del.clear();
+            visited.clear();
+            int n = q.size();
             for (int i = 0; i < n; i++) {
                 auto p = q.front();
                 q.pop();
-                auto s = p.back();
-                if (s == endWord) {
-                    ans.emplace_back(p);
+                auto word = p.back();
+                if (word == endWord) {
                     found = true;
+                    ans.emplace_back(p);
                 }
-                for (int j = 0; j < s.size(); j++) {
-                    char c = s[j];
+                visited.emplace(word);
+                for (int j = 0; j < word.size(); j++) {
+                    char c = word[j];
                     for (int k = 0; k < 26; k++) {
-                        s[j] = k + 'a';
-                        if (s[j] == c) continue;
-                        if (dict.count(s)) {
-                            to_del.emplace(s);
-                            p.emplace_back(s);
+                        word[j] = k + 'a';
+                        if (word[j] != c && dict.count(word)) {
+                            p.emplace_back(word);
                             q.emplace(p);
                             p.pop_back();
+                            visited.emplace(word);
                         }
                     }
-                    s[j] = c;
+                    word[j] = c;
                 }
             }
+            if (found) break;
         }
         return ans;
     }

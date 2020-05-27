@@ -25,10 +25,10 @@ public:
         int l = 0, h = arr.size() - k;
         while (l < h) {
             int m = l + (h - l) / 2;
-            if (abs(arr[m] - x) <= abs(arr[m + k] - x)) {
-                h = m;
-            } else {
+            if (abs(arr[m] - x) > abs(arr[m + k] - x)) {
                 l = m + 1;
+            } else {
+                h = m;
             }
         }
         return vector<int>(arr.begin() + l, arr.begin() + l + k);

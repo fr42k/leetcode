@@ -38,37 +38,33 @@ public:
     
     /** Build a dictionary through a list of words */
     void buildDict(vector<string> dict) {
-        for (auto w: dict) {
-            mem.emplace(w);
+        for (auto s: dict) {
+            mem.emplace(s);
         }
     }
     
     /** Returns if there is any word in the trie that equals to the given word after modifying exactly one character */
     bool search(string word) {
-        if (verified.count(word)) return true;
-        if (notin.count(word)) return false;
-        for (auto k: mem) {
-            if (k.size() == word.size() && changeone(word, k)) {
-                verified.emplace(word);
-                return true;
+        for (auto s: mem) {
+            if (s.size() == word.size() && changeone(word, s)) {
+                    return true;
             }
         }
-        notin.emplace(word);
         return false;
     }
-    
     bool changeone(string a, string b) {
-        bool change = false;
+        bool change = 0;
         for (int i = 0; i < a.size(); i++) {
             if (a[i] != b[i]) {
-                if (change) return false;
+                if (change) {
+                    return false;
+                }
                 change = true;
             }
         }
         return change;
     }
     unordered_set<string> mem;
-    unordered_set<string> verified, notin;
 };
 
 /**

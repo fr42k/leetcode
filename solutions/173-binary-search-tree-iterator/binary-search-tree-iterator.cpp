@@ -36,7 +36,7 @@
 
 
 /**
- * Definition for a binary tree node.
+ * Definition for binary tree
  * struct TreeNode {
  *     int val;
  *     TreeNode *left;
@@ -46,44 +46,33 @@
  */
 class BSTIterator {
 public:
-    BSTIterator(TreeNode* root) {
-        p = root;
+    BSTIterator(TreeNode *root) {
+        go_left(root);
     }
-    
-    /** @return the next smallest number */
-    int next() {
-        if (!p->left) {
-            int ans = p->val;
-            p = p->right;
-            return ans;
-        } else {
-            auto tmp = p->left;
-            while (tmp->right && tmp->right != p) {
-                tmp = tmp->right;
-            }
-            if (!tmp->right) {
-                tmp->right = p;
-                p = p->left;
-                return next();
-            } else {
-                tmp->right = nullptr;
-                int ans = p->val;
-                p = p->right;
-                return ans;
-            }
-        }
-    }
-    
+
     /** @return whether we have a next smallest number */
     bool hasNext() {
-        return p;
+        return !stk.empty();
     }
-    TreeNode* p;
+
+    /** @return the next smallest number */
+    int next() {
+        TreeNode* p = stk.top();
+        stk.pop();
+        go_left(p->right);
+        return p->val;
+    }
+    void go_left(TreeNode* root) {
+        while (root) {
+            stk.emplace(root);
+            root = root->left;
+        }
+    }
+    stack<TreeNode*> stk;
 };
 
 /**
- * Your BSTIterator object will be instantiated and called as such:
- * BSTIterator* obj = new BSTIterator(root);
- * int param_1 = obj->next();
- * bool param_2 = obj->hasNext();
+ * Your BSTIterator will be called like this:
+ * BSTIterator i = BSTIterator(root);
+ * while (i.hasNext()) cout << i.next();
  */

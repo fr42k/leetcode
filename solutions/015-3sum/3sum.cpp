@@ -22,52 +22,50 @@ class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         /*
-        unordered_map<int, int> mp;
-        set<vector<int>> st;
-        for (int n: nums) {
-            mp[n]++;
-        }
-        for (auto it_a = mp.begin(); it_a != mp.end(); it_a++) {
-            for (auto it_b = it_a; it_b != mp.end(); it_b++) {
-                int a = it_a->first;
-                int b = it_b->first;
-                int c = 0 - a - b;
-                if (mp.count(c)) {
-                    mp[a]--;
-                    mp[b]--;
-                    mp[c]--;
-                    if (mp[a] >= 0 && mp[b] >= 0 && mp[c] >= 0) {
-                        vector<int> v{a, b, c};
-                        sort(v.begin(), v.end());
-                        st.emplace(v);
+        int n = nums.size();
+        unordered_set<int> used1, used2, sum;
+        vector<vector<int>> ans;
+        for (int i = 0; i <= n - 3; i++) {
+            if (!used1.count(nums[i])) {
+                int t = -nums[i];
+                used2.clear();
+                sum.clear();
+                for (int j = i + 1; j < n; j++) {
+                    if (!used1.count(nums[j]) && !used2.count(nums[j])) {
+                        if (sum.count(t - nums[j])) {
+                            ans.emplace_back(vector<int>{nums[i], t - nums[j], nums[j]});
+                            used2.emplace(nums[j]);
+                        } else {
+                            sum.emplace(nums[j]);
+                        }
                     }
-                    mp[a]++;
-                    mp[b]++;
-                    mp[c]++;
                 }
+                used1.emplace(nums[i]);
             }
         }
-        return vector<vector<int>>(st.begin(), st.end());
+        return ans;
         */
         int n = nums.size();
-        sort(nums.begin(), nums.end());
+        unordered_set<int> used1;
         vector<vector<int>> ans;
-        for (int i = 0; i < n - 2; i++) {
-            if (i && nums[i] == nums[i - 1]) continue;
-            int l = i + 1, h = n - 1;
-            while (l < h) {
-                int sum = nums[i] + nums[l] + nums[h];
-                if (sum == 0) {
-                    ans.emplace_back(vector<int>{nums[i], nums[l], nums[h]});
-                    while (l < h && nums[l] == nums[l + 1]) l++;
-                    while (l < h && nums[h] == nums[h - 1]) h--;
-                    l++;
-                    h--;
-                } else if (sum < 0) {
-                    l++;
-                } else {
-                    h--;
+        unordered_set<int> used2, sum2;
+        for (int i = 0; i <= n - 3; i++) {
+            if (!used1.count(nums[i])) {
+                int t = -nums[i];
+                used2.clear();
+                sum2.clear();
+                for (int j = i + 1; j < n; j++) {
+                    if (!used1.count(nums[j]) && !used2.count(nums[j])) {
+                        if (sum2.count(t - nums[j])) {
+                            ans.emplace_back(vector<int>{nums[i], t - nums[j], nums[j]});
+                            used2.emplace(nums[j]);
+                        } else {
+                            // avoid duplicate
+                            sum2.emplace(nums[j]);
+                        }
+                    }
                 }
+                used1.emplace(nums[i]);
             }
         }
         return ans;

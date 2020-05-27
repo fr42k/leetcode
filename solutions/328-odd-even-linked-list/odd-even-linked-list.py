@@ -16,11 +16,13 @@
 # Output: 2->3->6->7->1->5->4->NULL
 #
 #
-# Note:
+#  
+# Constraints:
 #
 #
 # 	The relative order inside both the even and odd groups should remain as it was in the input.
 # 	The first node is considered odd, the second node even and so on ...
+# 	The length of the linked list is between [0, 10^4].
 #
 #
 

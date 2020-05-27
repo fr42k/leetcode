@@ -21,15 +21,12 @@
 class Solution {
 public:
     bool isPalindrome(string s) {
-        int n = s.size();
-        int i = 0, j = n - 1;
-        while (i < j) {
-            if (!isalnum(s[i])) ++i;
-            else if (!isalnum(s[j])) --j;
-            else {
-                if (toupper(s[i]) != toupper(s[j])) return false;
-                ++i;
-                --j;
+        int l = 0, h = s.size() - 1;
+        while (l < h) {
+            while (l < h && !isalnum(s[l])) l++;
+            while (l < h && !isalnum(s[h])) h--;
+            if (toupper(s[l++]) != toupper(s[h--])) {
+                return false;
             }
         }
         return true;

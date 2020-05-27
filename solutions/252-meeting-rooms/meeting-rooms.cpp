@@ -14,6 +14,8 @@
 // Output: true
 //
 //
+// NOTE: input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.
+//
 
 
 /**
@@ -28,15 +30,16 @@
 class Solution {
 public:
     bool canAttendMeetings(vector<Interval>& intervals) {
-        if (intervals.size() < 2) return true;
-        sort(intervals.begin(), intervals.end(), [](Interval& a, Interval& b){return a.start < b.start;});
-        int e = intervals[0].end;
-        for (int i = 1; i < intervals.size(); i++) {
-            if (e > intervals[i].start) {
-                return false;
-            }
-            e = intervals[i].end;
+        map<int, int> mp;
+        for (auto p: intervals) {
+            mp[p.start]++;
+            mp[p.end]--;
         }
-        return true;
+        int meet = 0, sum = 0;
+        for (auto p: mp) {
+            sum += p.second;
+            meet = max(meet, sum);
+        }
+        return meet <= 1;
     }
 };

@@ -32,24 +32,24 @@
 class Solution {
 public:
     int calculate(string s) {
-        long val = 0;
-        vector<int> sym(2, 1);
+        long ans = 0;
+        vector<int> sign(2, 1);
         for (int i = 0; i < s.size(); i++) {
             if (s[i] == ' ') continue;
             if (isdigit(s[i])) {
-                long tmp = 0;
+                long num = 0;
                 while (i < s.size() && isdigit(s[i])) {
-                    tmp = tmp * 10 + s[i++] - '0';
+                    num = num * 10 + s[i++] - '0';
                 }
                 i--;
-                val += sym.back() * tmp;
-                sym.pop_back();
+                ans += sign.back() * num;
+                sign.pop_back();
             } else if (s[i] == ')') {
-                sym.pop_back();
+                sign.pop_back();
             } else {
-                sym.emplace_back(sym.back() * (s[i] == '-'? -1: 1));
+                sign.emplace_back(sign.back() * (s[i] == '-'? -1: 1));
             }
         }
-        return val;
+        return ans;
     }
 };

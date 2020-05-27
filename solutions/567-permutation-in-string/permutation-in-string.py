@@ -18,8 +18,7 @@
 #
 #
 #  
-#
-# Note:
+# Constraints:
 #
 #
 # 	The input strings only contain lower case letters.

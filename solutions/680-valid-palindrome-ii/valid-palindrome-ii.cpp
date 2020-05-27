@@ -28,14 +28,18 @@
 class Solution {
 public:
     bool validPalindrome(string s) {
-        for (int l = 0, h = s.size() - 1; l < h; l++, h--) {
+        int l = 0, h = s.size() - 1;
+        while (l < h) {
             if (s[l] != s[h]) {
-                return ispal(s, l, h - 1) || ispal(s, l + 1, h);
+                return ispal(s.substr(l, h - l)) || ispal(s.substr(l + 1, h - l));
             }
+            l++;
+            h--;
         }
         return true;
     }
-    bool ispal(string s, int l, int h) {
+    bool ispal(string s) {
+        int l = 0, h = s.size() - 1;
         while (l < h) {
             if (s[l++] != s[h--]) {
                 return false;

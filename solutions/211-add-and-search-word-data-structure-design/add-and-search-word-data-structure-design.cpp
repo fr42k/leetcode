@@ -26,10 +26,10 @@
 
 class Trie {
 public:
-    vector<Trie*> next;
     bool w;
-    Trie(): w(false) {
-        next.resize(26);
+    vector<Trie*> next;
+    Trie(bool v = false): w(v) {
+        next.resize(26, nullptr);
     }
 };
 class WordDictionary {
@@ -53,24 +53,24 @@ public:
     
     /** Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. */
     bool search(string word) {
-        auto p = root;
-        return query(word, p);
+        return query(root, word);
     }
-    bool query(string word, Trie* p) {
+    bool query(Trie* p, string word) {
+        if (!p) return false;
         for (int i = 0; i < word.size(); i++) {
-            if (word[i] == '.') {
-                for (int j = 0; j < 26; j++) {
-                    if (p->next[j] && query(word.substr(i + 1), p->next[j])) {
+            char c = word[i];
+            if (c == '.') {
+                for (auto r: p->next) {
+                    if (query(r, word.substr(i + 1))) {
                         return true;
                     }
                 }
                 return false;
             } else {
-                if (p->next[word[i] - 'a']) {
-                    p = p->next[word[i] - 'a'];
-                } else {
+                if (!p->next[c - 'a']) {
                     return false;
                 }
+                p = p->next[c - 'a'];
             }
         }
         return p && p->w;

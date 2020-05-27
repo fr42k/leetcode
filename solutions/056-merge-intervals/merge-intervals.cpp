@@ -39,10 +39,11 @@ public:
         vector<Interval> ans;
         ans.emplace_back(intervals[0]);
         for (int i = 1; i < intervals.size(); i++) {
-            if (ans.back().end < intervals[i].start) {
+            int s = intervals[i].start, e = intervals[i].end;
+            if (ans.back().end < s) {
                 ans.emplace_back(intervals[i]);
             } else {
-                ans.back().end = max(ans.back().end, intervals[i].end);
+                ans.back().end = max(ans.back().end, e);
             }
         }
         return ans;
