@@ -30,16 +30,18 @@
 class Solution {
 public:
     bool canAttendMeetings(vector<Interval>& intervals) {
-        map<int, int> mp;
-        for (auto p: intervals) {
-            mp[p.start]++;
-            mp[p.end]--;
+        if (intervals.size() <= 1) return true;
+        auto cmp = [](Interval& a, Interval& b) {
+            return a.start < b.start;
+        };
+        sort(intervals.begin(), intervals.end(), cmp);
+        int e = intervals[0].end;
+        for (int i = 1; i < intervals.size(); i++) {
+            if (e > intervals[i].start) {
+                return false;
+            }
+            e = intervals[i].end;
         }
-        int meet = 0, sum = 0;
-        for (auto p: mp) {
-            sum += p.second;
-            meet = max(meet, sum);
-        }
-        return meet <= 1;
+        return true;
     }
 };
