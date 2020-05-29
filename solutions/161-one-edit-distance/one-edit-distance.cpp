@@ -47,7 +47,7 @@ public:
                     t[i] = s[i];
                 } else {
                     t.insert(i, 1, s[i]);
-                } 
+                }
                 mismatch = true;
                 break;
             }

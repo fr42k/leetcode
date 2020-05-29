@@ -34,22 +34,17 @@
 class Solution {
 public:
     double myPow(double x, int n) {
-        bool neg = n < 0;
-        double pre = 1.0;
-        if (n == INT_MIN) {
-            n += 1;
-            pre = 1 / x;
-        }
-        double bin = 1.0;
-        n = abs(n);
-        while (n > 0) {
-            if (n & 1) {
-                bin *= x;
+        if (!n) return 1.0;
+        bool posi = n > 0;
+        long an = labs(n);
+        double ans = 1.0;
+        while (an > 0) {
+            if (an & 1) {
+                ans *= x;
             }
             x *= x;
-            n >>= 1;
+            an /= 2;
         }
-        double ans = neg? 1/bin: bin;
-        return ans * pre;
+        return posi? ans: 1/ans;
     }
 };
