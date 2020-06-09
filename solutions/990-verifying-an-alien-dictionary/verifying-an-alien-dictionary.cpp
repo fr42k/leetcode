@@ -44,15 +44,27 @@ public:
         if (words.size() <= 1) {
             return true;
         }
-        unordered_map<char, char> seq;
+        unordered_map<char, int> seq;
         for (int i = 0; i < order.size(); i++) {
-            seq[order[i]] = i + 'a';
+            seq[order[i]] = i;
         }
-        for (auto &w: words) {
-            for (auto &c: w) {
-                c = seq[c];
+        string last = words[0];
+        bool cmp_ed = false;
+        for (int i = 1; i < words.size(); i++) {
+            for (int j = 0; j < min(last.size(), words[i].size()); j++) {
+                if (last[j] == words[i][j]) continue;
+                else if (seq[last[j]] > seq[words[i][j]]) {
+                    return false;
+                } else {
+                    cmp_ed = true;
+                    break;
+                }
             }
+            if (!cmp_ed && last.size() > words[i].size()) {
+                return false;
+            }
+            last = words[i];
         }
-        return is_sorted(words.begin(), words.end());
+        return true;
     }
 };
