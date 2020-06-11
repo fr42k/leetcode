@@ -1,5 +1,5 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-06-11 00:22:23  
+Update time:  2020-06-11 06:43:38  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
 I have solved **800   /   1348** problems  
 while there are **214** problems still locked.  
@@ -1001,7 +1001,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1080|[camelcase-matching](https://leetcode.com/problems/camelcase-matching)|||Medium|
 |1081|[video-stitching](https://leetcode.com/problems/video-stitching)|||Medium|
 |1082|[sum-of-digits-in-the-minimum-number](https://leetcode.com/problems/sum-of-digits-in-the-minimum-number)|:lock:||Easy|
-|1083|[two-sum-less-than-k](https://leetcode.com/problems/two-sum-less-than-k)|:lock:||Easy|
+|1083|[two-sum-less-than-k](https://leetcode.com/problems/two-sum-less-than-k)|:lock:|[:memo:](https://leetcode.com/articles/two-sum-less-than-k/)|Easy|
 |1084|[find-k-length-substrings-with-no-repeated-characters](https://leetcode.com/problems/find-k-length-substrings-with-no-repeated-characters)|:lock:||Medium|
 |1085|[the-earliest-moment-when-everyone-become-friends](https://leetcode.com/problems/the-earliest-moment-when-everyone-become-friends)|:lock:||Medium|
 |1086|[divisor-game](https://leetcode.com/problems/divisor-game)|||Easy|
