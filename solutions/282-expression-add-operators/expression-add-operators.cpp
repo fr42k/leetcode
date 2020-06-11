@@ -33,6 +33,14 @@
 // Output: []
 //
 //
+//  
+// Constraints:
+//
+//
+// 	0 <= num.length <= 10
+// 	num only contain digits.
+//
+//
 
 
 class Solution {
