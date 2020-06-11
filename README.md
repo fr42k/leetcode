@@ -1,8 +1,8 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-06-10 18:00:59  
+Update time:  2020-06-11 00:22:23  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **800   /   1347** problems  
-while there are **213** problems still locked.  
+I have solved **800   /   1348** problems  
+while there are **214** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
 If you are loving solving problems in leetcode, please contact me to enjoy it together!  
@@ -1357,3 +1357,4 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1582|[design-browser-history](https://leetcode.com/problems/design-browser-history)|||Medium|
 |1583|[paint-house-iii](https://leetcode.com/problems/paint-house-iii)|||Hard|
 |1609|[find-all-the-lonely-nodes](https://leetcode.com/problems/find-all-the-lonely-nodes)|:lock:||Easy|
+|1618|[delete-n-nodes-after-m-nodes-of-a-linked-list](https://leetcode.com/problems/delete-n-nodes-after-m-nodes-of-a-linked-list)|:lock:||Easy|
