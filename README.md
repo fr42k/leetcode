@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-06-27 20:40:40  
+Update time:  2020-06-28 02:59:09  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **800   /   1366** problems  
+I have solved **800   /   1370** problems  
 while there are **216** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
@@ -1374,5 +1374,9 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1612|[avoid-flood-in-the-city](https://leetcode.com/problems/avoid-flood-in-the-city)|||Medium|
 |1613|[find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree)|||Hard|
 |1618|[delete-n-nodes-after-m-nodes-of-a-linked-list](https://leetcode.com/problems/delete-n-nodes-after-m-nodes-of-a-linked-list)|:lock:||Easy|
+|1619|[path-crossing](https://leetcode.com/problems/path-crossing)|||Easy|
+|1620|[check-if-array-pairs-are-divisible-by-k](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k)|||Medium|
+|1621|[number-of-subsequences-that-satisfy-the-given-sum-condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition)|||Medium|
+|1622|[max-value-of-equation](https://leetcode.com/problems/max-value-of-equation)|||Hard|
 |1624|[clone-binary-tree-with-random-pointer](https://leetcode.com/problems/clone-binary-tree-with-random-pointer)|:lock:||Medium|
 |1634|[clone-n-ary-tree](https://leetcode.com/problems/clone-n-ary-tree)|:lock:||Medium|
