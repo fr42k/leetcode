@@ -1,8 +1,8 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-07-01 20:05:47  
+Update time:  2020-07-02 02:24:27  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **800   /   1370** problems  
-while there are **216** problems still locked.  
+I have solved **800   /   1371** problems  
+while there are **217** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
 If you are loving solving problems in leetcode, please contact me to enjoy it together!  
@@ -1380,3 +1380,4 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1622|[max-value-of-equation](https://leetcode.com/problems/max-value-of-equation)|||Hard|
 |1624|[clone-binary-tree-with-random-pointer](https://leetcode.com/problems/clone-binary-tree-with-random-pointer)|:lock:||Medium|
 |1634|[clone-n-ary-tree](https://leetcode.com/problems/clone-n-ary-tree)|:lock:||Medium|
+|1640|[design-a-file-sharing-system](https://leetcode.com/problems/design-a-file-sharing-system)|:lock:||Medium|
