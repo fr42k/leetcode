@@ -1,5 +1,5 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-07-06 01:26:24  
+Update time:  2020-07-06 07:34:37  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
 I have solved **21   /   1375** problems  
 while there are **217** problems still locked.  
@@ -204,7 +204,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |208|[implement-trie-prefix-tree](https://leetcode.com/problems/implement-trie-prefix-tree)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/208-implement-trie-prefix-tree/implement-trie-prefix-tree.py)|[:memo:](https://leetcode.com/articles/implement-trie-prefix-tree/)|Medium|
 |209|[minimum-size-subarray-sum](https://leetcode.com/problems/minimum-size-subarray-sum)||[:memo:](https://leetcode.com/articles/minimum-size-subarray-sum/)|Medium|
 |210|[course-schedule-ii](https://leetcode.com/problems/course-schedule-ii)||[:memo:](https://leetcode.com/articles/course-schedule-ii/)|Medium|
-|211|[add-and-search-word-data-structure-design](https://leetcode.com/problems/add-and-search-word-data-structure-design)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/211-add-and-search-word-data-structure-design/add-and-search-word-data-structure-design.cpp)||Medium|
+|211|[add-and-search-word-data-structure-design](https://leetcode.com/problems/add-and-search-word-data-structure-design)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/211-add-and-search-word-data-structure-design/add-and-search-word-data-structure-design.cpp)|[:memo:](https://leetcode.com/articles/add-and-search-word/)|Medium|
 |212|[word-search-ii](https://leetcode.com/problems/word-search-ii)||[:memo:](https://leetcode.com/articles/word-search-ii/)|Hard|
 |213|[house-robber-ii](https://leetcode.com/problems/house-robber-ii)|||Medium|
 |214|[shortest-palindrome](https://leetcode.com/problems/shortest-palindrome)||[:memo:](https://leetcode.com/articles/shortest-palindrome/)|Hard|
