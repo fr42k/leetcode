@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-07-06 13:42:48  
+Update time:  2020-07-06 19:50:55  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **21   /   1375** problems  
+I have solved **22   /   1375** problems  
 while there are **217** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
@@ -30,7 +30,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |18|[4sum](https://leetcode.com/problems/4sum)||[:memo:](https://leetcode.com/articles/4sum/)|Medium|
 |19|[remove-nth-node-from-end-of-list](https://leetcode.com/problems/remove-nth-node-from-end-of-list)||[:memo:](https://leetcode.com/articles/remove-nth-node-from-end-of-list/)|Medium|
 |20|[valid-parentheses](https://leetcode.com/problems/valid-parentheses)||[:memo:](https://leetcode.com/articles/valid-parentheses/)|Easy|
-|21|[merge-two-sorted-lists](https://leetcode.com/problems/merge-two-sorted-lists)||[:memo:](https://leetcode.com/articles/merged-two-sorted-lists/)|Easy|
+|21|[merge-two-sorted-lists](https://leetcode.com/problems/merge-two-sorted-lists)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/021-merge-two-sorted-lists/merge-two-sorted-lists.py)|[:memo:](https://leetcode.com/articles/merged-two-sorted-lists/)|Easy|
 |22|[generate-parentheses](https://leetcode.com/problems/generate-parentheses)||[:memo:](https://leetcode.com/articles/generate-parentheses/)|Medium|
 |23|[merge-k-sorted-lists](https://leetcode.com/problems/merge-k-sorted-lists)|[Cpp](https://github.com/fr42k/leetcode/blob/master/solutions/023-merge-k-sorted-lists/merge-k-sorted-lists.cpp)|[:memo:](https://leetcode.com/articles/merge-k-sorted-list/)|Hard|
 |24|[swap-nodes-in-pairs](https://leetcode.com/problems/swap-nodes-in-pairs)||[:memo:](https://leetcode.com/articles/swap-nodes-in-pairs/)|Medium|
