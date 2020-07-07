@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-07-07 08:07:07  
+Update time:  2020-07-07 14:15:16  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **22   /   1375** problems  
+I have solved **23   /   1375** problems  
 while there are **217** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
@@ -227,7 +227,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |231|[power-of-two](https://leetcode.com/problems/power-of-two)||[:memo:](https://leetcode.com/articles/power-of-two/)|Easy|
 |232|[implement-queue-using-stacks](https://leetcode.com/problems/implement-queue-using-stacks)||[:memo:](https://leetcode.com/articles/implement-queue-using-stacks/)|Easy|
 |233|[number-of-digit-one](https://leetcode.com/problems/number-of-digit-one)||[:memo:](https://leetcode.com/articles/number-of-digit-one/)|Hard|
-|234|[palindrome-linked-list](https://leetcode.com/problems/palindrome-linked-list)||[:memo:](https://leetcode.com/articles/palindrome-linked-list/)|Easy|
+|234|[palindrome-linked-list](https://leetcode.com/problems/palindrome-linked-list)|[Python3](https://github.com/fr42k/leetcode/blob/master/solutions/234-palindrome-linked-list/palindrome-linked-list.py)|[:memo:](https://leetcode.com/articles/palindrome-linked-list/)|Easy|
 |235|[lowest-common-ancestor-of-a-binary-search-tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree)||[:memo:](https://leetcode.com/articles/lowest-common-ancestor-of-a-binary-search-tree/)|Easy|
 |236|[lowest-common-ancestor-of-a-binary-tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)||[:memo:](https://leetcode.com/articles/lowest-common-ancestor-of-a-binary-tree/)|Medium|
 |237|[delete-node-in-a-linked-list](https://leetcode.com/problems/delete-node-in-a-linked-list)||[:memo:](https://leetcode.com/articles/delete-node-linked-list/)|Easy|
