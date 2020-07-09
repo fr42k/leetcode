@@ -1,8 +1,8 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-07-08 19:02:50  
+Update time:  2020-07-09 01:10:53  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **23   /   1375** problems  
-while there are **217** problems still locked.  
+I have solved **23   /   1376** problems  
+while there are **218** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
 If you are loving solving problems in leetcode, please contact me to enjoy it together!  
@@ -1385,3 +1385,4 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1629|[minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits](https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits)|||Hard|
 |1634|[clone-n-ary-tree](https://leetcode.com/problems/clone-n-ary-tree)|:lock:||Medium|
 |1640|[design-a-file-sharing-system](https://leetcode.com/problems/design-a-file-sharing-system)|:lock:||Medium|
+|1650|[find-root-of-n-ary-tree](https://leetcode.com/problems/find-root-of-n-ary-tree)|:lock:||Medium|
