@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-07-11 08:24:23  
+Update time:  2020-07-11 17:18:26  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **23   /   1376** problems  
+I have solved **23   /   1380** problems  
 while there are **218** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
@@ -1156,6 +1156,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1280|[diet-plan-performance](https://leetcode.com/problems/diet-plan-performance)|:lock:||Easy|
 |1281|[can-make-palindrome-from-substring](https://leetcode.com/problems/can-make-palindrome-from-substring)|||Medium|
 |1282|[number-of-valid-words-for-each-puzzle](https://leetcode.com/problems/number-of-valid-words-for-each-puzzle)|||Hard|
+|1283|[reformat-date](https://leetcode.com/problems/reformat-date)|||Easy|
 |1284|[four-divisors](https://leetcode.com/problems/four-divisors)|||Medium|
 |1285|[balance-a-binary-search-tree](https://leetcode.com/problems/balance-a-binary-search-tree)|||Medium|
 |1286|[constrained-subsequence-sum](https://leetcode.com/problems/constrained-subsequence-sum)|||Hard|
@@ -1373,6 +1374,9 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1611|[making-file-names-unique](https://leetcode.com/problems/making-file-names-unique)|||Medium|
 |1612|[avoid-flood-in-the-city](https://leetcode.com/problems/avoid-flood-in-the-city)|||Medium|
 |1613|[find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree)|||Hard|
+|1615|[range-sum-of-sorted-subarray-sums](https://leetcode.com/problems/range-sum-of-sorted-subarray-sums)|||Medium|
+|1616|[minimum-difference-between-largest-and-smallest-value-in-three-moves](https://leetcode.com/problems/minimum-difference-between-largest-and-smallest-value-in-three-moves)|||Medium|
+|1617|[stone-game-iv](https://leetcode.com/problems/stone-game-iv)|||Hard|
 |1618|[delete-n-nodes-after-m-nodes-of-a-linked-list](https://leetcode.com/problems/delete-n-nodes-after-m-nodes-of-a-linked-list)|:lock:||Easy|
 |1619|[path-crossing](https://leetcode.com/problems/path-crossing)|||Easy|
 |1620|[check-if-array-pairs-are-divisible-by-k](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k)|||Medium|
