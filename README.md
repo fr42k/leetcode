@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-07-11 17:18:26  
+Update time:  2020-07-11 23:25:59  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **23   /   1380** problems  
+I have solved **23   /   1384** problems  
 while there are **218** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
@@ -1178,6 +1178,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1320|[remove-all-adjacent-duplicates-in-string-ii](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii)||[:memo:](https://leetcode.com/articles/remove-all-adjacent-duplicates-in-string-ii/)|Medium|
 |1321|[get-equal-substrings-within-budget](https://leetcode.com/problems/get-equal-substrings-within-budget)|||Medium|
 |1322|[minimum-moves-to-reach-target-with-rotations](https://leetcode.com/problems/minimum-moves-to-reach-target-with-rotations)|||Hard|
+|1325|[path-with-maximum-probability](https://leetcode.com/problems/path-with-maximum-probability)|||Medium|
 |1329|[play-with-chips](https://leetcode.com/problems/play-with-chips)|||Easy|
 |1330|[longest-arithmetic-subsequence-of-given-difference](https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference)|||Medium|
 |1331|[path-with-maximum-gold](https://leetcode.com/problems/path-with-maximum-gold)|||Medium|
@@ -1388,5 +1389,8 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1628|[count-submatrices-with-all-ones](https://leetcode.com/problems/count-submatrices-with-all-ones)|||Medium|
 |1629|[minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits](https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits)|||Hard|
 |1634|[clone-n-ary-tree](https://leetcode.com/problems/clone-n-ary-tree)|:lock:||Medium|
+|1635|[number-of-good-pairs](https://leetcode.com/problems/number-of-good-pairs)|||Easy|
+|1636|[number-of-substrings-with-only-1s](https://leetcode.com/problems/number-of-substrings-with-only-1s)|||Medium|
+|1638|[best-position-for-a-service-centre](https://leetcode.com/problems/best-position-for-a-service-centre)|||Hard|
 |1640|[design-a-file-sharing-system](https://leetcode.com/problems/design-a-file-sharing-system)|:lock:||Medium|
 |1650|[find-root-of-n-ary-tree](https://leetcode.com/problems/find-root-of-n-ary-tree)|:lock:||Medium|
