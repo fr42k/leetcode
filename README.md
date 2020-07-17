@@ -1,5 +1,5 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-07-16 11:03:53  
+Update time:  2020-07-16 17:07:49  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
 I have solved **23   /   1385** problems  
 while there are **219** problems still locked.  
@@ -1015,7 +1015,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1094|[matrix-cells-in-distance-order](https://leetcode.com/problems/matrix-cells-in-distance-order)|||Easy|
 |1095|[two-city-scheduling](https://leetcode.com/problems/two-city-scheduling)||[:memo:](https://leetcode.com/articles/two-city-scheduling/)|Easy|
 |1096|[maximum-sum-of-two-non-overlapping-subarrays](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays)|||Medium|
-|1097|[stream-of-characters](https://leetcode.com/problems/stream-of-characters)|||Hard|
+|1097|[stream-of-characters](https://leetcode.com/problems/stream-of-characters)||[:memo:](https://leetcode.com/articles/stream-of-characters/)|Hard|
 |1098|[largest-unique-number](https://leetcode.com/problems/largest-unique-number)|:lock:||Easy|
 |1099|[path-with-maximum-minimum-value](https://leetcode.com/problems/path-with-maximum-minimum-value)|:lock:||Medium|
 |1100|[connecting-cities-with-minimum-cost](https://leetcode.com/problems/connecting-cities-with-minimum-cost)|:lock:||Medium|
