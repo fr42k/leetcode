@@ -1,8 +1,8 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3  
-Update time:  2020-07-22 20:28:04  
+Update time:  2020-07-23 02:33:22  
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **27   /   1389** problems  
-while there are **219** problems still locked.  
+I have solved **27   /   1390** problems  
+while there are **220** problems still locked.  
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).  
 If you are loving solving problems in leetcode, please contact me to enjoy it together!  
@@ -1399,3 +1399,4 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1645|[find-a-value-of-a-mysterious-function-closest-to-target](https://leetcode.com/problems/find-a-value-of-a-mysterious-function-closest-to-target)|||Hard|
 |1650|[find-root-of-n-ary-tree](https://leetcode.com/problems/find-root-of-n-ary-tree)|:lock:||Medium|
 |1655|[move-sub-tree-of-n-ary-tree](https://leetcode.com/problems/move-sub-tree-of-n-ary-tree)|:lock:||Hard|
+|1665|[diameter-of-n-ary-tree](https://leetcode.com/problems/diameter-of-n-ary-tree)|:lock:||Medium|
