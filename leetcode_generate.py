@@ -21,6 +21,7 @@ from selenium import webdriver
 from collections import namedtuple, OrderedDict
 
 HOME = Path.cwd()
+MAX_DIGIT_LEN = 4 # 1000+ PROBLEMS
 SOLUTION_FOLDER_NAME = 'solutions'
 SOLUTION_FOLDER = Path.joinpath(HOME, SOLUTION_FOLDER_NAME)
 CONFIG_FILE = Path.joinpath(HOME, 'config.cfg')
@@ -107,6 +108,8 @@ ProgLangList = [
     ProgLang('kotlin', 'kt', '//'),
     ProgLang('swift', 'swift', '//'),
     ProgLang('golang', 'go', '//'),
+    ProgLang('scala', 'scala', '//'),
+    ProgLang('rust', 'rs', '//'),
 ]
 ProgLangDict = dict((item.language, item) for item in ProgLangList)
 CONFIG = get_config_from_file()
@@ -470,7 +473,7 @@ class Leetcode:
             )
             return
 
-        qname = '{id}-{title}'.format(id=str(qid).zfill(3), title=qtitle)
+        qname = '{id}-{title}'.format(id=str(qid).zfill(MAX_DIGIT_LEN), title=qtitle)
         print('begin download ' + qname)
         path = Path.joinpath(SOLUTION_FOLDER, qname)
         check_and_make_dir(path)
@@ -521,17 +524,17 @@ class Leetcode:
     def write_readme(self):
         """Write Readme to current folder"""
         languages_readme = ','.join([x.capitalize() for x in self.languages])
-        md = '''# :pencil2: Leetcode Solutions with {language}  
-Update time:  {tm}  
-Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)  
-I have solved **{num_solved}   /   {num_total}** problems  
-while there are **{num_lock}** problems still locked.  
-If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)  
-If you have any question, please give me an [issue]({repo}/issues).  
-If you are loving solving problems in leetcode, please contact me to enjoy it together!  
-(Notes: :lock: means you need to buy a book from Leetcode to unlock the problem)  
+        md = '''# :pencil2: Leetcode Solutions with {language}
+Update time:  {tm}
+Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)
+I have solved **{num_solved}   /   {num_total}** problems
+while there are **{num_lock}** problems still locked.
+If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)
+If you have any question, please give me an [issue]({repo}/issues).
+If you are loving solving problems in leetcode, please contact me to enjoy it together!
+(Notes: :lock: means you need to buy a book from Leetcode to unlock the problem)
 
-| # | Title | My Solution | Official Solution | Difficulty |  
+| # | Title | My Solution | Official Solution | Difficulty |
 |:---:|:---:|:---:|:---:|:---:|'''.format(
             language=languages_readme,
             tm=time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())),
@@ -553,7 +556,7 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
                 if item.solutions:
                     dirname = '{folder}/{id}-{title}'.format(
                         folder=SOLUTION_FOLDER_NAME,
-                        id=str(item.question_id).zfill(3),
+                        id=str(item.question_id).zfill(MAX_DIGIT_LEN),
                         title=item.question__title_slug,
                     )
                     language = ''
