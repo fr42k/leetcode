@@ -1,7 +1,7 @@
 # :pencil2: Leetcode Solutions with Cpp,Python,Python3
-Update time:  2020-07-25 07:45:42
+Update time:  2020-07-25 13:54:05
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)
-I have solved **28   /   1390** problems
+I have solved **28   /   1394** problems
 while there are **220** problems still locked.
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)
 If you have any question, please give me an [issue](https://github.com/fr42k/leetcode/issues).
@@ -1388,6 +1388,10 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |1627|[last-moment-before-all-ants-fall-out-of-a-plank](https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank)|||Medium|
 |1628|[count-submatrices-with-all-ones](https://leetcode.com/problems/count-submatrices-with-all-ones)|||Medium|
 |1629|[minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits](https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits)|||Hard|
+|1630|[count-odd-numbers-in-an-interval-range](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range)|||Easy|
+|1631|[number-of-sub-arrays-with-odd-sum](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum)|||Medium|
+|1632|[number-of-good-ways-to-split-a-string](https://leetcode.com/problems/number-of-good-ways-to-split-a-string)|||Medium|
+|1633|[minimum-number-of-increments-on-subarrays-to-form-a-target-array](https://leetcode.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array)|||Hard|
 |1634|[clone-n-ary-tree](https://leetcode.com/problems/clone-n-ary-tree)|:lock:||Medium|
 |1635|[number-of-good-pairs](https://leetcode.com/problems/number-of-good-pairs)|||Easy|
 |1636|[number-of-substrings-with-only-1s](https://leetcode.com/problems/number-of-substrings-with-only-1s)|||Medium|
